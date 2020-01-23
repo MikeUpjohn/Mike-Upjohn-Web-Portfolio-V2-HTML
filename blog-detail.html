@@ -28,14 +28,30 @@
       <nav class="navbar navbar-default">
         <div class="container-fluid">
          <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-           <li><a href="index.html">Home</a></li>
-           <li><a href="about-me.html">About Me</a></li>
-           <li><a href="projects.html">Projects</a></li>
-           <li><a href="technologies.html">Technologies</a></li>
-           <li><a href="blog.html">Blog</a></li>
-           <li><a href="contact-me.html">Contact Me</a></li>
-         </ul>
+          <ul class="nav navbar-nav mr-auto">
+            <li class="standout-item">
+              <a href="#" onClick="loadStormChaseStats(event)">
+                <i class="fas fa-map-marked-alt"></i>
+              </a>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Storm Chase Blogs</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Arizona Monsoon Chase 2019</a>
+                <a class="dropdown-item" href="#">Storm Chase 2019</a>
+                <a class="dropdown-item" href="#">Storm Chase 2018</a>
+                <a class="dropdown-item" href="#">Storm Chase 2017</a>
+                <a class="dropdown-item" href="#">Storm Chase 2016</a>
+                <a class="dropdown-item" href="#">Storm Chase 2015</a>
+              </div>
+            </li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="technologies.html">Map</a></li>
+            <li><a href="blog.html">Gallery</a></li>
+            <li><a href="contact-me.html">Contact Me</a></li>
+          </ul>
        </div>
        <div class="navbar-header">
          <!-- <a class="navbar-brand">WebSiteName</a> -->
@@ -81,7 +97,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 row-no-padding white-area">
+      <div class="col-xs-12 row-no-padding dark-grey-area">
        <footer>
         <div class="left-footer">&copy; Michael Upjohn 2015</div>
         <div class="right-footer">
@@ -105,14 +121,24 @@
 </div>
 <div id="menu" class="nav-collapse">
   <ul>
-   <li class="brand">Mike Upjohn</li>
-   <li class="home"><a href="index.html">Home</a></li>
-   <li><a href="about-me.html">About Me</a></li>
-   <li><a href="projects.html">Projects</a></li>
-   <li><a href="technologies.html">Technologies</a></li>
-   <li><a href="blog.html">Blog</a></li>
-   <li><a href="contact-me.html">Contact Me</a></li>
- </ul>
+    <li class="brand">Mike Upjohn</li>
+    <li class="home"><a href="index.html">Home</a></li>
+    <li>
+      <a href="about-me.html">Storm Chase Blogs</a>
+      <ul class="mobile-sub-menu">
+        <li><a href="#">Arizona Monsoon Chase 2019</a></li>
+        <li><a href="#">Storm Chase 2019</a></li>
+        <li><a href="#">Storm Chase 2018</a></li>
+        <li><a href="#">Storm Chase 2017</a></li>
+        <li><a href="#">Storm Chase 2016</a></li>
+        <li><a href="#">Storm Chase 2015</a></li>
+      </ul>
+    </li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="technologies.html">Map</a></li>
+    <li><a href="blog.html">Gallery</a></li>
+    <li><a href="contact-me.html">Contact Me</a></li>
+  </ul>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
