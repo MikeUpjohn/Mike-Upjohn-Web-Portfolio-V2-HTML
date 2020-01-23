@@ -1,0 +1,183 @@
+/* Homepage */
+.content-area .latest-project {
+	text-align: right;
+	margin-bottom:2.5em;
+}
+
+.content-area .latest-project h4 {
+	font-size:1.6em;
+}
+
+.content-area .latest-project p {
+	text-align: right;
+}
+
+.content-area .latest-project .project-image img {
+	width:100%;
+	height:auto;
+}
+
+.content-area .latest-blog {
+	text-align: left;
+	margin-bottom:2.5em;
+}
+
+.content-area .latest-blog h4 {
+	font-size:1.6em;
+}
+
+.content-area .latest-blog .blog-image img {
+	width:100%;
+	height:auto;
+}
+
+.content-area .latest-blog p {
+	text-align: left;
+}
+
+.content-area .item-date {
+	font-size:1.2em;
+	font-family: "Segoe UI Light", "Arial", sans-serif;
+}
+
+.content-area .contact-me {
+	margin-bottom:2.5em;
+}
+
+.content-area .contact-me p {
+	text-align: center;
+}
+
+/* End Home Page */
+
+/* About Me */
+.work-together-cta {
+	background-color:#5902F8;
+	padding:10px 10px 10px 10px;
+	margin-top:2.0em;
+	max-width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	font-family:"Segoe UI Semibold","Arial", sans-serif;
+}
+
+.work-together-cta h3 {
+	color:#FFFFFF;
+	margin-top: 15px;
+}
+
+.work-together-cta p {
+	color:#FFFFFF;
+	margin-bottom: 1.0em;
+	font-size: 1.2em;
+	font-family: "Segoe UI Light", "Arial", sans-serif;
+	text-align: center;
+}
+
+.work-together-cta a.view-details {
+	max-width:50%;
+	text-align: center;
+}
+
+/* End About Me */
+
+/* For Blogs */
+	.blog .blog-item {
+		padding-top:2.0em;
+	}
+
+	.blog .blog-item.latest {
+		padding-top:0.0em;
+	}
+
+	.blog .blog-item h4 {
+		font-size: 1.6em;
+	}
+
+	.blog .blog-item p {
+		text-align: left;
+	}
+
+	.blog .blog-item.right h4, .blog .blog-item.right .item-date, .blog .blog-item.right p {
+		text-align: right;
+	}
+	
+	.blog .blog-item .blog-image img {
+		width:100%;
+		height:auto;
+	}
+/* End Blogs */
+
+/* For Projects */
+	.projects .project-item {
+		padding-top:2.0em;
+	}
+
+	.projects .project-item.latest {
+		padding-top:0.0em;
+	}
+
+	.projects .project-item h4 {
+		font-size: 1.6em;
+	}
+
+	.projects .project-item p {
+		text-align: left;
+	}
+
+
+	.projects .project-item.right h4, .projects .project-item.right .item-date, .projects .project-item.right p {
+		text-align: right;
+	}
+	
+	.projects .project-item .project-image img {
+		width:100%;
+		height:auto;
+	}
+/* End Projects */
+
+/* Technologies */
+body.technologies {
+	background-color: #FFFFFF;
+}
+
+.technologies h1 {
+	margin-top: 0px;
+}
+
+.technologies h1 {
+	font-family: "Segoe UI Black", "Arial", sans-serif;
+	font-size:5.0em;
+	color:#34274D;
+}
+/* End Technologies */
+
+/* Blog Details */
+.detail-page h1 {
+	font-size:2.0em;
+}
+
+.detail-page h3 {
+	font-family:"Segoe UI Light","Arial", sans-serif;
+	font-size:1.2em;
+	text-align: left;
+	margin-top:0px;
+}
+
+.detail-page p {
+	text-align: left;
+}
+/* End Blog Details */
+
+/* Contact Me */
+	.contact-options {
+		text-align: center;
+		list-style-type: none;
+	}
+
+	#map {
+		width:100%;
+		height:450px;
+		background-color: #FF0000;
+	}
+/* End Contact Me */
