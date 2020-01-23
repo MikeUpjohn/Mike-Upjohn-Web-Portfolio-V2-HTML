@@ -170,13 +170,13 @@ body.technologies {
 /* End Blog Details */
 
 /* Contact Me */
-	.contact-options {
-		text-align: center;
-		list-style-type: none;
-	}
+.contact-options {
+	text-align: center;
+	list-style-type: none;
+}
 
-	#map {
-		width:100%;
-		height:450px;
-	}
+#map {
+	width:100%;
+	height:450px;
+}
 /* End Contact Me */
