@@ -4,7 +4,7 @@
 		background-size: cover;
 	}
 
-	.projects .banner-image {
+	.projects .banner-image, .blog .banner-image, .contact-me .banner-image {
 		background: url('../../_includes/img/banner-image-02.jpg') no-repeat -339px center local;
 		background-size: cover;
 	}
