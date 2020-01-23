@@ -75,3 +75,7 @@ function initMap() {
 		map.setCenter(center);
 	});
 }
+
+$(document).ready(function() {
+	initMap();
+});
