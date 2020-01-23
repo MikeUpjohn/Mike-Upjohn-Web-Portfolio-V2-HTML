@@ -1,6 +1,11 @@
 @media (max-width: 767px) {
-	.banner-image {
+	.homepage .banner-image {
 		background: url('../../_includes/img/banner-image-02.jpg') no-repeat -800px center local;
+		background-size: cover;
+	}
+
+	.projects .banner-image {
+		background: url('../../_includes/img/banner-image-02.jpg') no-repeat -339px center local;
 		background-size: cover;
 	}
 
