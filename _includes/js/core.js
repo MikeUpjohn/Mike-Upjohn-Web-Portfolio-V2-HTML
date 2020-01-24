@@ -54,3 +54,11 @@ $("#mobile-navigation-toggle").click(function() {
 
 	$(".navbar-toggle").blur();
 });
+
+$(document).ready(function() {
+	if($(".flyout-map") !== undefined) {
+		$(".flyout-map").width(width);
+		$(".flyout-map").height(height);
+		$(".flyout-map").css({left: -width});
+	}
+});
