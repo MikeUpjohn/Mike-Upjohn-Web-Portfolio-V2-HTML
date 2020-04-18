@@ -1,0 +1,17 @@
+.flyout-map {
+	background-color: #262626;
+}
+
+.close, .close:hover {
+	font-size:3.0em;
+	color:#FFFFFF;
+	margin-right:20px;
+	margin-top:20px;
+	display:block;
+}
+
+#flyout-map-area {
+	background-color:white;
+	height:400px;
+	margin-top:20px;
+}
