@@ -17,3 +17,24 @@
 	margin-right:-15px;
 	margin-bottom:-15px;
 }
+
+.control-panel {
+
+}
+
+.control-panel h3 {
+	color:#FFFFFF;
+	font-weight:bold;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.form-check-label {
+	color:#C4C4C4;
+	font-size:1.1em;
+}
+
+.sub-checkboxes {
+	margin-left:25px;
+	font-size:0.9em;
+}
