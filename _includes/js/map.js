@@ -27,12 +27,28 @@ function LockMap() {
 }
 
 function LoadMap() {
-	mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZXVwam9obiIsImEiOiJjazk2enRjbHQwODB5M2xtanB6bGtoOW9zIn0.QKZt26yxRxYmzMa6i1RkYQ';
-	var map = new mapboxgl.Map({
-		container: 'flyout-map-area',
-		style: 'mapbox://styles/mapbox/streets-v11',
-		center: [-97.008434, 32.835795],
-		zoom: 6
-	});
+	if($("#flyout-map-area").data('loaded') == false) {
+		mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZXVwam9obiIsImEiOiJjazk2enRjbHQwODB5M2xtanB6bGtoOW9zIn0.QKZt26yxRxYmzMa6i1RkYQ';
+		var map = new mapboxgl.Map({
+			container: 'flyout-map-area',
+			style: 'mapbox://styles/mapbox/streets-v11',
+			center: [-97.008434, 32.835795],
+			zoom: 6
+		});
 
+		$("#flyout-map-area").data('loaded', true);
+
+		map.on('load', function() {
+			map.addSource('route', {
+				'type': 'geojson',
+				'data': {
+					'type': 'Feature',
+					'properties': {},
+					'geometry': {
+
+					}
+				}
+			})
+		});
+	}
 }
