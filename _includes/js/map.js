@@ -10,6 +10,8 @@ function loadStormChaseMap(e) {
 	$("#flyout-map-area").height(height - mapTopNavigationHeight);
 
 	window.addEventListener('scroll', LockMap);
+
+	LoadMap();
 }
 
 $("#flyout-map-close").click(function(e) {
@@ -22,4 +24,15 @@ $("#flyout-map-close").click(function(e) {
 
 function LockMap() {
   window.scrollTo(0, 0);
+}
+
+function LoadMap() {
+	mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZXVwam9obiIsImEiOiJjazk2enRjbHQwODB5M2xtanB6bGtoOW9zIn0.QKZt26yxRxYmzMa6i1RkYQ';
+	var map = new mapboxgl.Map({
+		container: 'flyout-map-area',
+		style: 'mapbox://styles/mapbox/streets-v11',
+		center: [-97.008434, 32.835795],
+		zoom: 6
+	});
+
 }
