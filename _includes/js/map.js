@@ -119,7 +119,6 @@ function LoadMap() {
 		map.on('load', function() {
 			map.addSource('day-1', featureCollection);
 			map.addLayer(layer);
-			/*map.addLayer(stops);*/
 			featureCollection.data.features.forEach(function(marker) {
 				var element = document.createElement('div');
 				element.className = 'marker';
@@ -144,47 +143,7 @@ function LoadMap() {
 
 			map.on('mouseleave', 'day-1-stops', function() {
 				map.getCanvas().style.cursor = '';
-			})
-
-			/*map.addSource('route2', {
-				'type': 'geojson',
-				'data': {
-					'type': 'Feature',
-					'properties': {
-						'color':'#FF7300'
-					},
-					'geometry': {
-						'type':'LineString',
-						'coordinates':[
-							[-102.888393,30.897362],
-							[-102.848314,31.332861],
-							[-102.902266,31.566934],
-							[-102.368791, 31.844895],
-							[-102.650131, 32.623653],
-							[-102.646444, 32.877580],
-							[-101.857310, 33.582353],
-							[-101.727445, 34.178194],
-							[-101.829711, 35.234794],
-							[-101.834672, 35.404316],
-							[-101.964373, 35.591752],
-							[-102.068477, 36.338982],
-							[-100.538674, 37.292601],
-							[-100.000084, 37.284822],
-							[-100.012123, 37.759409]
-						]
-					}
-				}
 			});
-
-			map.addLayer({
-				'id':'lines1',
-				'type':'line',
-				'source':'route2',
-				'paint': {
-					'line-width': 5,
-					'line-color': ['get', 'color']
-				}
-			});*/
 		});
 	}
 }
