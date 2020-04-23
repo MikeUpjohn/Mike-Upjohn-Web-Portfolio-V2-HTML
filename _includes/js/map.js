@@ -3,8 +3,8 @@ var routesLayer;
 var height = $(window).height();
 var mapTopNavigationHeight = $("#flyout-map-close").outerHeight(true); // True to include margin
 
-function loadStormChaseMap(e) {
-    e.preventDefault();
+$("#storm-chase-map").click(function(e) {
+ 	e.preventDefault();
     LockMap();
 
     $("#flyout-map").animate({"left":"0"}, "slow");
@@ -13,7 +13,7 @@ function loadStormChaseMap(e) {
 	window.addEventListener('scroll', LockMap);
 
 	LoadMap();
-}
+});
 
 $("#flyout-map-close").click(function(e) {
 	e.preventDefault();
@@ -38,11 +38,8 @@ function LoadMap() {
 
 		$("#flyout-map-area").data('loaded', true);
 
-		
-
 		map.on('load', function() {
 			map.addSource('routes', dailyRouteSource);
-			
 		});
 	}
 }
@@ -93,4 +90,4 @@ $(".form-check-input").click(function(e) {
 	var day = $(this).data('day');
 
 	RefreshMap(day);
-})
+});
