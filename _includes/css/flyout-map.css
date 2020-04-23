@@ -48,3 +48,8 @@
   cursor: pointer;
   top:-12px !important;
 }
+
+.sub-checkboxes {
+	margin-left:25px;
+	font-size:0.9em;
+} 

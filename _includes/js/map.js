@@ -1,11 +1,11 @@
 var map;
+var routesLayer;
 var height = $(window).height();
 var mapTopNavigationHeight = $("#flyout-map-close").outerHeight(true); // True to include margin
 
 function loadStormChaseMap(e) {
     e.preventDefault();
     LockMap();
-    console.log("called load storm chase stats...");
 
     $("#flyout-map").animate({"left":"0"}, "slow");
 	$("#flyout-map-area").height(height - mapTopNavigationHeight);
@@ -17,8 +17,7 @@ function loadStormChaseMap(e) {
 
 $("#flyout-map-close").click(function(e) {
 	e.preventDefault();
-
-	$("#flyout-map").animate({"left":"-1903"}, "slow");
+	$("#flyout-map").animate({"left":"-1903"}, "slow"); // TODO: Make this dynamic...
 
 	window.removeEventListener('scroll', LockMap);
 });
@@ -39,36 +38,48 @@ function LoadMap() {
 
 		$("#flyout-map-area").data('loaded', true);
 
-		var routesLayer = {
-			'id':'route',
-			'type':'line',
-			'source':'routes',
-			'layout': {
-				'line-join':'round',
-				'line-cap':'round'
-			},
-			'paint': {
-				'line-width': 5,
-				'line-color': ['get', 'colour']
-			}
-		};
+		
 
 		map.on('load', function() {
 			map.addSource('routes', dailyRouteSource);
-			map.addLayer(routesLayer);
-
-			routePoints.data.features.forEach(function(marker) {
-				var element = document.createElement('div');
-				element.className = 'marker';
-
-				new mapboxgl.Marker(element)
-				.setLngLat(marker.geometry.coordinates)
-				.setPopup(new mapboxgl.Popup({offset: 25})
-					.setHTML(marker.properties.description))
-				.addTo(map);
-			});
+			
 		});
 	}
+}
+
+function RefreshMap(day) {
+	routesLayer = {
+		'id':'route',
+		'type':'line',
+		'source':'routes',
+		'layout': {
+			'line-join':'round',
+			'line-cap':'round'
+		},
+		'paint': {
+			'line-width': 5,
+			'line-color': ['get', 'colour']
+		}
+	};
+
+	if(map.getLayer('route') !== undefined) {
+		map.removeLayer('route');
+	}
+
+	map.addLayer(routesLayer);
+	map.setFilter('route', ['==', 'day', day]);
+
+	var markers = MarkersByDay(day);
+	markers.forEach(function(marker) {
+		var element = document.createElement('div');
+		element.className = 'marker';
+
+		new mapboxgl.Marker(element)
+		.setLngLat(marker.geometry.coordinates)
+		.setPopup(new mapboxgl.Popup({offset: 25})
+			.setHTML(marker.properties.description))
+		.addTo(map);
+	});
 }
 
 function MarkersByDay(day) {
@@ -78,6 +89,8 @@ function MarkersByDay(day) {
 }
 
 $(".form-check-input").click(function(e) {
-	e.preventDefault();
-	alert("Hi");
+	var year = $(this).data('year');
+	var day = $(this).data('day');
+
+	RefreshMap(day);
 })
