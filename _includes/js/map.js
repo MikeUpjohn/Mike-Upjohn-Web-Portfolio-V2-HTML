@@ -86,7 +86,7 @@ function LoadMap() {
 						},
 						'geometry': {
 							'type': 'Point',
-							'coordinates': [-98.830593,32.371882]
+							'coordinates': [-102.898511, 31.566852]
 						}
 					}
 				]
@@ -119,14 +119,20 @@ function LoadMap() {
 		map.on('load', function() {
 			map.addSource('day-1', featureCollection);
 			map.addLayer(layer);
-			featureCollection.data.features.forEach(function(marker) {
+
+			var points = featureCollection.data.features.filter(IsPoint)
+			points.forEach(function(marker) {
 				var element = document.createElement('div');
 				element.className = 'marker';
 
-				new mapboxgl.Marker(element).setLngLat(marker.geometry.coordinates).addTo(map);
+				new mapboxgl.Marker(element)
+				.setLngLat(marker.geometry.coordinates)
+				.setPopup(new mapboxgl.Popup({offset: 25})
+					.setHTML(marker.properties.description))
+				.addTo(map);
 			})
 
-			map.on('click', 'day-1-stops', function(e) {
+			/*map.on('click', 'day-1-stops', function(e) {
 				var coordinates = e.features[0].geometry.coordinates.slice();
 				var description = e.features[0].properties.description;
 
@@ -135,15 +141,19 @@ function LoadMap() {
 				}
 
 				new mapboxgl.Popup().setLngLat(coordinates).setHTML(description).addTo(map);
-			});
+			});*/
 
-			map.on('mouseenter', 'day-1-stops', function() {
+			/*map.on('mouseenter', 'day-1-stops', function() {
 				map.getCanvas().style.cursor = 'pointer';
-			});
+			});*/
 
-			map.on('mouseleave', 'day-1-stops', function() {
+			/*map.on('mouseleave', 'day-1-stops', function() {
 				map.getCanvas().style.cursor = '';
-			});
+			});*/
 		});
+
+		function IsPoint(marker) {
+			return marker.geometry.type == "Point";
+		} 
 	}
 }
