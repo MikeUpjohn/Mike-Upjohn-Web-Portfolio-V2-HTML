@@ -38,15 +38,21 @@ function LoadMap() {
 		});
 
 		$("#flyout-map-area").data('loaded', true);
-
-		//map.on('load', function() {
-			//map.addSource('routes', dailyRouteSource);
-		//});
 	}
 }
 
 function RefreshMap(year, day) {
 	var allCheckboxes = $(".form-check-input:checked").toArray();
+	routeTemplate.data.features = [];
+	markerTemplate.data.features = [];
+
+	if(map.getLayer('route') !== undefined) {
+		map.removeLayer('route');
+	}
+
+	if(map.getSource('route') !== undefined) {
+		map.removeSource('route');
+	}
 
 	allCheckboxes.forEach(function(checkbox) {
 		let thisCheckboxYear = $(checkbox).data('year');
@@ -60,11 +66,11 @@ function RefreshMap(year, day) {
 			return marker.properties.year == thisCheckboxYear && marker.properties.day == thisCheckboxDay;
 		});
 
-		routeTemplate.data.features.push(thisDayRoute);
-		markerTemplate.data.features.push(thisDayMarkers);
-
-		map.addSource('route', routeTemplate);
+		routeTemplate.data.features.push(...thisDayRoute);
+		markerTemplate.data.features.push(...thisDayMarkers);
 	});
+
+	map.addSource('route', routeTemplate);
 
 	routesLayer = {
 		'id':'route',
@@ -80,15 +86,12 @@ function RefreshMap(year, day) {
 		}
 	};
 
-	if(map.getLayer('route') !== undefined) {
-		map.removeLayer('route');
-	}
 
 	map.addLayer(routesLayer);
-	map.setFilter('route', ['==', 'day', day]);
+	//map.setFilter('route', ['==', 'day', day]);
 
 	//var markers = MarkersByDay(day);
-	markersTemplate.forEach(function(marker) {
+	markerTemplate.data.features.forEach(function(marker) {
 		var element = document.createElement('div');
 		element.className = 'marker';
 
