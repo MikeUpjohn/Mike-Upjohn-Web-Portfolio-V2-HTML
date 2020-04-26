@@ -1,5 +1,6 @@
 var map;
 var routesLayer;
+var routesLayer2;
 var height = $(window).height();
 var mapTopNavigationHeight = $("#flyout-map-close").outerHeight(true); // True to include margin
 
@@ -38,17 +39,37 @@ function LoadMap() {
 
 		$("#flyout-map-area").data('loaded', true);
 
-		map.on('load', function() {
-			map.addSource('routes', dailyRouteSource);
-		});
+		//map.on('load', function() {
+			//map.addSource('routes', dailyRouteSource);
+		//});
 	}
 }
 
-function RefreshMap(day) {
+function RefreshMap(year, day) {
+	var allCheckboxes = $(".form-check-input:checked").toArray();
+
+	allCheckboxes.forEach(function(checkbox) {
+		let thisCheckboxYear = $(checkbox).data('year');
+		let thisCheckboxDay = $(checkbox).data('day');
+
+		var thisDayRoute = route.filter(function(routeItem) {
+			return routeItem.properties.year == thisCheckboxYear && routeItem.properties.day == thisCheckboxDay;
+		});
+
+		var thisDayMarkers = markers.filter(function(marker) {
+			return marker.properties.year == thisCheckboxYear && marker.properties.day == thisCheckboxDay;
+		});
+
+		routeTemplate.data.features.push(thisDayRoute);
+		markerTemplate.data.features.push(thisDayMarkers);
+
+		map.addSource('route', routeTemplate);
+	});
+
 	routesLayer = {
 		'id':'route',
 		'type':'line',
-		'source':'routes',
+		'source':'route',
 		'layout': {
 			'line-join':'round',
 			'line-cap':'round'
@@ -66,8 +87,8 @@ function RefreshMap(day) {
 	map.addLayer(routesLayer);
 	map.setFilter('route', ['==', 'day', day]);
 
-	var markers = MarkersByDay(day);
-	markers.forEach(function(marker) {
+	//var markers = MarkersByDay(day);
+	markersTemplate.forEach(function(marker) {
 		var element = document.createElement('div');
 		element.className = 'marker';
 
@@ -79,15 +100,15 @@ function RefreshMap(day) {
 	});
 }
 
-function MarkersByDay(day) {
+/*function MarkersByDay(day) {
 	return routePoints.data.features.filter(function(point) {
 		return point.properties.day == day;
 	});
-}
+}*/
 
 $(".form-check-input").click(function(e) {
 	var year = $(this).data('year');
 	var day = $(this).data('day');
 
-	RefreshMap(day);
+	RefreshMap(year, day);
 });
