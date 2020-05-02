@@ -119,8 +119,26 @@ function RefreshMap(year, day) {
 }*/
 
 $(".form-check-input").click(function(e) {
-	var year = $(this).data('year');
-	var day = $(this).data('day');
 
-	RefreshMap(year, day);
+	var isParent = $(this).hasClass("parent");
+
+	if(isParent) {
+		// check all child checkboxes and then load all map days...
+		// expand child checkboxes
+
+		//$(this).find(".sub-checkboxes").collapse();
+		
+
+	}
+	else {	
+		var year = $(this).data('year');
+		var day = $(this).data('day');
+
+		RefreshMap(year, day);
+	}
+
 });
+
+/*$(".sub-checkboxes").collapse({
+	toggle: true
+});*/

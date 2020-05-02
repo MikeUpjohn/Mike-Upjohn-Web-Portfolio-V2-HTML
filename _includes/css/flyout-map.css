@@ -50,6 +50,10 @@
 }
 
 .sub-checkboxes {
-	margin-left:25px;
 	font-size:0.9em;
-} 
+	background-color:#695c6e;
+}
+
+.sub-checkboxes .form-check-input {
+	margin-left:25px;
+}
