@@ -3,6 +3,7 @@ var routesLayer;
 var routesLayer2;
 var height = $(window).height();
 var mapTopNavigationHeight = $("#flyout-map-close").outerHeight(true); // True to include margin
+var activeMarkers = [];
 
 $("#storm-chase-map").click(function(e) {
  	e.preventDefault();
@@ -54,6 +55,12 @@ function RefreshMap(year, day) {
 		map.removeSource('route');
 	}
 
+	activeMarkers.forEach(function(marker) {
+		marker.remove();
+	});
+
+	activeMarkers = [];
+
 	allCheckboxes.forEach(function(checkbox) {
 		let thisCheckboxYear = $(checkbox).data('year');
 		let thisCheckboxDay = $(checkbox).data('day');
@@ -95,11 +102,13 @@ function RefreshMap(year, day) {
 		var element = document.createElement('div');
 		element.className = 'marker';
 
-		new mapboxgl.Marker(element)
+		var currentMarker = new mapboxgl.Marker(element)
 		.setLngLat(marker.geometry.coordinates)
 		.setPopup(new mapboxgl.Popup({offset: 25})
 			.setHTML(marker.properties.description))
 		.addTo(map);
+
+		activeMarkers.push(currentMarker);
 	});
 }
 

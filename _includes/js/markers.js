@@ -23,5 +23,17 @@ var markers =
 			'day': 1,
 			'description':'<b>Monahans, TX</b><br/><p>Saw a nice storm here</p>'
 		}
+	},
+	{
+		'type':'Feature',
+		'geometry': {
+			'type': 'Point',
+			'coordinates': [-99.881041, 36.266991]
+		},
+		'properties': {
+			'year': 2015,
+			'day': 2,
+			'description':'<b>Shattuck, OK</b><br/><p>Stopped at the Windmill Museum!</p>'
+		}
 	}
 ];
