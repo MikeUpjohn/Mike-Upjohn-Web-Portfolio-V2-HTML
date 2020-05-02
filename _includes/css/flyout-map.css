@@ -39,6 +39,10 @@
 	display:inline;
 }
 
+.control-panel .glyphicon-chevron-down {
+	color:#FFFFFF;
+}
+
 .marker {
   background-image: url('../img/map-pin.svg');
   background-size: cover;
