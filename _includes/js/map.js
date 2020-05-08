@@ -119,18 +119,41 @@ function RefreshMap(year, day) {
 }*/
 
 $(".form-check-input").click(function(e) {
-
+	e.stopPropagation();
 	var isParent = $(this).hasClass("parent");
 
 	if(isParent) {
+		var isParentChecked = $(this).prop('checked');
 		// check all child checkboxes and then load all map days...
 		// expand child checkboxes
+		var subCheckboxes = $(this).parent().find(".sub-checkboxes");
 
-		//$(this).find(".sub-checkboxes").collapse();
-		
+		if(subCheckboxes.hasClass("in")) {
+			// expanded already
 
+			if(isParentChecked) {
+				$(this).parent().find(".sub-checkboxes input:checkbox").prop('checked', true);
+				var checkedSubCheckboxes = $(subCheckboxes.find("input:checkbox:checked"));
+
+				for(var i = 0; i < checkedSubCheckboxes.length; i++) {
+					var item = $(checkedSubCheckboxes[i]);
+					RefreshMap(item.data('year'), item.data('day'));
+				}
+			}
+			else {
+				$(this).parent().find(".sub-checkboxes").collapse('hide');
+				$(this).parent().find(".sub-checkboxes input:checkbox").prop('checked', false);
+			}
+			
+		}
+		else {
+			// not yet expanded
+
+			$(this).parent().find(".sub-checkboxes").collapse('show');
+			$(this).parent().find(".sub-checkboxes input:checkbox").prop('checked', true);
+		}
 	}
-	else {	
+	else {
 		var year = $(this).data('year');
 		var day = $(this).data('day');
 
