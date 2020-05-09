@@ -42,7 +42,7 @@ function LoadMap() {
 	}
 }
 
-function RefreshMap(year, day) {
+function RefreshMap() {
 	var allCheckboxes = $(".form-check-input:checked").toArray();
 	routeTemplate.data.features = [];
 	markerTemplate.data.features = [];
@@ -93,11 +93,8 @@ function RefreshMap(year, day) {
 		}
 	};
 
-
 	map.addLayer(routesLayer);
-	//map.setFilter('route', ['==', 'day', day]);
 
-	//var markers = MarkersByDay(day);
 	markerTemplate.data.features.forEach(function(marker) {
 		var element = document.createElement('div');
 		element.className = 'marker';
@@ -112,12 +109,6 @@ function RefreshMap(year, day) {
 	});
 }
 
-/*function MarkersByDay(day) {
-	return routePoints.data.features.filter(function(point) {
-		return point.properties.day == day;
-	});
-}*/
-
 $(".form-check-input").click(function(e) {
 	e.stopPropagation();
 	var isParent = $(this).hasClass("parent");
@@ -129,7 +120,7 @@ $(".form-check-input").click(function(e) {
 		var subCheckboxes = $(this).parent().find(".sub-checkboxes");
 
 		if(subCheckboxes.hasClass("in")) {
-			// expanded already
+			// This section expanded already
 
 			if(isParentChecked) {
 				$(this).parent().find(".sub-checkboxes input:checkbox").prop('checked', true);
@@ -137,7 +128,6 @@ $(".form-check-input").click(function(e) {
 
 				for(var i = 0; i < checkedSubCheckboxes.length; i++) {
 					var item = $(checkedSubCheckboxes[i]);
-					RefreshMap(item.data('year'), item.data('day'));
 				}
 			}
 			else {
@@ -147,21 +137,23 @@ $(".form-check-input").click(function(e) {
 			
 		}
 		else {
-			// not yet expanded
+			// This section is closed - expand and checkboxes
 
 			$(this).parent().find(".sub-checkboxes").collapse('show');
 			$(this).parent().find(".sub-checkboxes input:checkbox").prop('checked', true);
+
+			var checkedSubCheckboxes = $(subCheckboxes.find("input:checkbox:checked"));
+
+				for(var i = 0; i < checkedSubCheckboxes.length; i++) {
+					var item = $(checkedSubCheckboxes[i]);
+				}
 		}
 	}
 	else {
 		var year = $(this).data('year');
 		var day = $(this).data('day');
-
-		RefreshMap(year, day);
 	}
 
-});
+	RefreshMap();
 
-/*$(".sub-checkboxes").collapse({
-	toggle: true
-});*/
+});
