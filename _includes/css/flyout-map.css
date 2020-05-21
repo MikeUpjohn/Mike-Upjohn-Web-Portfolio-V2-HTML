@@ -36,12 +36,15 @@
 	color:#C4C4C4;
 	font-size:1.2em;
 	font-weight:400;
-	display:inline;
+	width: 270px;
+    display: inline-block;
 }
 
 .control-panel .glyphicon-triangle-bottom {
 	color:#C4C4C4;
 	font-size:0.8em;
+	float:right;
+	top:5px;
 }
 
 .marker {
@@ -57,8 +60,47 @@
 .sub-checkboxes {
 	font-size:0.9em;
 	background-color:#695c6e;
+	/*padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;*/
+}
+
+.sub-checkboxes .form-check:first-child {
+	padding-top:10px;
+}
+
+.sub-checkboxes .form-check:last-child {
+	padding-bottom:10px;
+	margin-bottom:10px;
 }
 
 .sub-checkboxes .form-check-input {
 	margin-left:25px;
+}
+
+.storm-chase-checkbox {
+	display:inline;
+	width:20px;
+}
+
+.storm-chase-checkbox-label {
+	display: inline-block;
+    width: 150px !important;
+    margin-left: 5px;
+}
+
+.map-line-color {
+	width: 75px;
+    display: inline-block;
+    height: 15px;
+}
+
+.map-line-color-marker {
+	background-color: red;
+    height: 10px;
+    width: 35px;
+    display: block;
+    margin-top: 6px;
+    margin-left: 12px;
+    border-radius: 3px;
 }
