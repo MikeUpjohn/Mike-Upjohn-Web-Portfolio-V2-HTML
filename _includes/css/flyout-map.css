@@ -38,7 +38,6 @@
 	font-weight:400;
 	width: 265px;
     display: inline-block;
-    margin-left: 5px;
 }
 
 .control-panel .glyphicon-triangle-bottom {
@@ -83,8 +82,11 @@
 
 .storm-chase-checkbox-label {
 	display: inline-block;
-    width: 150px !important;
-    margin-left: 5px;
+    width: 205px;
+}
+
+.storm-chase-checkbox-label .form-check-input {
+	margin-right:5px;
 }
 
 .map-line-color {
