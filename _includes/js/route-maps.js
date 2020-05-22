@@ -84,8 +84,8 @@ var route =
 	"type": "Feature",
       "properties": {
       	'year': 2018,
-		'day': 2,
-		'colour':'#C4C4C4',
+    		'day': 2,
+    		'colour':'#C4C4C4',
       },
       "geometry": {
         "type": "LineString",

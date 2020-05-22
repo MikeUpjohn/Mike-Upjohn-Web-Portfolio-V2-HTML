@@ -36,8 +36,9 @@
 	color:#C4C4C4;
 	font-size:1.2em;
 	font-weight:400;
-	width: 270px;
+	width: 265px;
     display: inline-block;
+    margin-left: 5px;
 }
 
 .control-panel .glyphicon-triangle-bottom {
@@ -60,9 +61,6 @@
 .sub-checkboxes {
 	font-size:0.9em;
 	background-color:#695c6e;
-	/*padding-bottom: 10px;
-    padding-top: 10px;
-    margin-bottom: 10px;*/
 }
 
 .sub-checkboxes .form-check:first-child {
@@ -96,7 +94,6 @@
 }
 
 .map-line-color-marker {
-	background-color: red;
     height: 10px;
     width: 35px;
     display: block;
