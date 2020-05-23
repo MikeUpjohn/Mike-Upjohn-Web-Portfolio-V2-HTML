@@ -104,7 +104,7 @@ function RefreshMap() {
 		var currentMarker = new mapboxgl.Marker(element)
 		.setLngLat(marker.geometry.coordinates)
 		.setPopup(new mapboxgl.Popup({offset: 25})
-			.setHTML(marker.properties.description))
+		.setHTML(marker.properties.description))
 		.addTo(map);
 
 		activeMarkers.push(currentMarker);
@@ -112,9 +112,10 @@ function RefreshMap() {
 }
 
 $(".form-check-input").click(function(e) {
+	e.stopPropagation();
+
 	var clickedCheckbox = $(this);
 
-	e.stopPropagation();
 	var isParent = clickedCheckbox.hasClass("parent");
 
 	if(isParent) {
@@ -122,7 +123,6 @@ $(".form-check-input").click(function(e) {
 		// check all child checkboxes and then load all map days...
 		// expand child checkboxes
 		var subCheckboxes = clickedCheckbox.parent().find(".sub-checkboxes");
-
 		if(subCheckboxes.hasClass("in")) {
 			// This section expanded already
 
@@ -135,6 +135,7 @@ $(".form-check-input").click(function(e) {
 				}
 			}
 			else {
+
 				clickedCheckbox.parent().find(".sub-checkboxes").collapse('hide');
 				clickedCheckbox.parent().find(".sub-checkboxes input:checkbox").prop('checked', false);
 			}
