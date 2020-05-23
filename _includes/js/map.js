@@ -29,16 +29,18 @@ function LockMap() {
 }
 
 function LoadMap() {
-	if($("#flyout-map-area").data('loaded') == false) {
+	var flyoutMapArea = $("#flyout-map-area");
+
+	if(flyoutMapArea.data('loaded') == false) {
 		mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZXVwam9obiIsImEiOiJjazk2enRjbHQwODB5M2xtanB6bGtoOW9zIn0.QKZt26yxRxYmzMa6i1RkYQ';
 		map = new mapboxgl.Map({
 			container: 'flyout-map-area',
 			style: 'mapbox://styles/mapbox/streets-v11',
-			center: [-97.008434, 32.835795],
+			center: [-97.008434, 32.835795], // TODO: Make this dynamic...
 			zoom: 6
 		});
 
-		$("#flyout-map-area").data('loaded', true);
+		flyoutMapArea.data('loaded', true);
 	}
 }
 
@@ -110,20 +112,22 @@ function RefreshMap() {
 }
 
 $(".form-check-input").click(function(e) {
+	var clickedCheckbox = $(this);
+
 	e.stopPropagation();
-	var isParent = $(this).hasClass("parent");
+	var isParent = clickedCheckbox.hasClass("parent");
 
 	if(isParent) {
-		var isParentChecked = $(this).prop('checked');
+		var isParentChecked = clickedCheckbox.prop('checked');
 		// check all child checkboxes and then load all map days...
 		// expand child checkboxes
-		var subCheckboxes = $(this).parent().find(".sub-checkboxes");
+		var subCheckboxes = clickedCheckbox.parent().find(".sub-checkboxes");
 
 		if(subCheckboxes.hasClass("in")) {
 			// This section expanded already
 
 			if(isParentChecked) {
-				$(this).parent().find(".sub-checkboxes input:checkbox").prop('checked', true);
+				clickedCheckbox.parent().find(".sub-checkboxes input:checkbox").prop('checked', true);
 				var checkedSubCheckboxes = $(subCheckboxes.find("input:checkbox:checked"));
 
 				for(var i = 0; i < checkedSubCheckboxes.length; i++) {
@@ -131,22 +135,22 @@ $(".form-check-input").click(function(e) {
 				}
 			}
 			else {
-				$(this).parent().find(".sub-checkboxes").collapse('hide');
-				$(this).parent().find(".sub-checkboxes input:checkbox").prop('checked', false);
+				clickedCheckbox.parent().find(".sub-checkboxes").collapse('hide');
+				clickedCheckbox.parent().find(".sub-checkboxes input:checkbox").prop('checked', false);
 			}
 			
 		}
 		else {
 			// This section is closed - expand and checkboxes
 
-			$(this).parent().find(".sub-checkboxes").collapse('show');
-			$(this).parent().find(".sub-checkboxes input:checkbox").prop('checked', true);
+			clickedCheckbox.parent().find(".sub-checkboxes").collapse('show');
+			clickedCheckbox.parent().find(".sub-checkboxes input:checkbox").prop('checked', true);
 
 			var checkedSubCheckboxes = $(subCheckboxes.find("input:checkbox:checked"));
 
-				for(var i = 0; i < checkedSubCheckboxes.length; i++) {
-					var item = $(checkedSubCheckboxes[i]);
-				}
+			for(var i = 0; i < checkedSubCheckboxes.length; i++) {
+				var item = $(checkedSubCheckboxes[i]);
+			}
 		}
 	}
 	else {
@@ -155,5 +159,4 @@ $(".form-check-input").click(function(e) {
 	}
 
 	RefreshMap();
-
 });
