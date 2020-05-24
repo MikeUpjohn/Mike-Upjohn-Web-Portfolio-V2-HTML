@@ -1,20 +1,19 @@
-var map;
-var routesLayer;
-var routesLayer2;
-var height = $(window).height();
-var mapTopNavigationHeight = $("#flyout-map-close").outerHeight(true); // True to include margin
-var activeMarkers = [];
+let map;
+let routesLayer;
+let mapTopNavigationHeight = $("#flyout-map-close").outerHeight(true); // True to include margin
+let activeMarkers = [];
 
 $("#storm-chase-map").click(function(e) {
  	e.preventDefault();
-    LockMap();
+
+    lockMap();
 
     $("#flyout-map").animate({"left":"0"}, "slow");
-	$("#flyout-map-area").height(height - mapTopNavigationHeight);
+	$("#flyout-map-area").height($(window).height() - mapTopNavigationHeight);
 
-	window.addEventListener('scroll', LockMap);
+	window.addEventListener('scroll', lockMap);
 
-	LoadMap();
+	loadMap();
 });
 
 $("#flyout-map-close").click(function(e) {
@@ -24,14 +23,45 @@ $("#flyout-map-close").click(function(e) {
 	window.removeEventListener('scroll', LockMap);
 });
 
-function LockMap() {
+$(".control-panel .form-check-input").click(function(e) {
+	e.stopPropagation();
+
+	let checkbox = $(this);
+	let isParent = checkbox.hasClass("parent");
+
+	if(isParent) {
+		let isParentChecked = checkbox.prop('checked');
+		// check all child checkboxes and then load all map days...
+		
+		let subCheckboxes = checkbox.parent().find(".sub-checkboxes");
+		if(subCheckboxes.hasClass("in")) {
+			// This section expanded already
+			if(isParentChecked) {
+				checkbox.parent().find(".sub-checkboxes input:checkbox").prop('checked', true);
+			}
+			else {
+				checkbox.parent().find(".sub-checkboxes").collapse('hide');
+				checkbox.parent().find(".sub-checkboxes input:checkbox").prop('checked', false);
+			}
+		}
+		else {
+			// This section is closed - expand and check checkboxes
+			checkbox.parent().find(".sub-checkboxes").collapse('show');
+			checkbox.parent().find(".sub-checkboxes input:checkbox").prop('checked', true);
+		}
+	}
+
+	refreshMap();
+});
+
+function lockMap() {
   window.scrollTo(0, 0);
 }
 
-function LoadMap() {
-	var flyoutMapArea = $("#flyout-map-area");
+function loadMap() {
+	let flyoutMap = $("#flyout-map-area");
 
-	if(flyoutMapArea.data('loaded') == false) {
+	if(flyoutMap.data('loaded') == false) {
 		mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZXVwam9obiIsImEiOiJjazk2enRjbHQwODB5M2xtanB6bGtoOW9zIn0.QKZt26yxRxYmzMa6i1RkYQ';
 		map = new mapboxgl.Map({
 			container: 'flyout-map-area',
@@ -40,12 +70,12 @@ function LoadMap() {
 			zoom: 6
 		});
 
-		flyoutMapArea.data('loaded', true);
+		flyoutMap.data('loaded', true);
 	}
 }
 
-function RefreshMap() {
-	var allCheckboxes = $(".form-check-input:checked").toArray();
+function refreshMap() {
+	let allCheckboxes = $(".form-check-input:checked").toArray();
 	routeTemplate.data.features = [];
 	markerTemplate.data.features = [];
 
@@ -67,11 +97,11 @@ function RefreshMap() {
 		let thisCheckboxYear = $(checkbox).data('year');
 		let thisCheckboxDay = $(checkbox).data('day');
 
-		var thisDayRoute = route.filter(function(routeItem) {
+		let thisDayRoute = route.filter(function(routeItem) {
 			return routeItem.properties.year == thisCheckboxYear && routeItem.properties.day == thisCheckboxDay;
 		});
 
-		var thisDayMarkers = markers.filter(function(marker) {
+		let thisDayMarkers = markers.filter(function(marker) {
 			return marker.properties.year == thisCheckboxYear && marker.properties.day == thisCheckboxDay;
 		});
 
@@ -91,17 +121,18 @@ function RefreshMap() {
 		},
 		'paint': {
 			'line-width': 5,
-			'line-color': ['get', 'colour']
+			'line-color': ['get', 'colour'],
+			'line-blur': 2
 		}
 	};
 
 	map.addLayer(routesLayer);
 
 	markerTemplate.data.features.forEach(function(marker) {
-		var element = document.createElement('div');
+		let element = document.createElement('div');
 		element.className = 'marker';
 
-		var currentMarker = new mapboxgl.Marker(element)
+		let currentMarker = new mapboxgl.Marker(element)
 		.setLngLat(marker.geometry.coordinates)
 		.setPopup(new mapboxgl.Popup({offset: 25})
 		.setHTML(marker.properties.description))
@@ -110,54 +141,3 @@ function RefreshMap() {
 		activeMarkers.push(currentMarker);
 	});
 }
-
-$(".form-check-input").click(function(e) {
-	e.stopPropagation();
-
-	var clickedCheckbox = $(this);
-
-	var isParent = clickedCheckbox.hasClass("parent");
-
-	if(isParent) {
-		var isParentChecked = clickedCheckbox.prop('checked');
-		// check all child checkboxes and then load all map days...
-		// expand child checkboxes
-		var subCheckboxes = clickedCheckbox.parent().find(".sub-checkboxes");
-		if(subCheckboxes.hasClass("in")) {
-			// This section expanded already
-
-			if(isParentChecked) {
-				clickedCheckbox.parent().find(".sub-checkboxes input:checkbox").prop('checked', true);
-				var checkedSubCheckboxes = $(subCheckboxes.find("input:checkbox:checked"));
-
-				for(var i = 0; i < checkedSubCheckboxes.length; i++) {
-					var item = $(checkedSubCheckboxes[i]);
-				}
-			}
-			else {
-
-				clickedCheckbox.parent().find(".sub-checkboxes").collapse('hide');
-				clickedCheckbox.parent().find(".sub-checkboxes input:checkbox").prop('checked', false);
-			}
-			
-		}
-		else {
-			// This section is closed - expand and checkboxes
-
-			clickedCheckbox.parent().find(".sub-checkboxes").collapse('show');
-			clickedCheckbox.parent().find(".sub-checkboxes input:checkbox").prop('checked', true);
-
-			var checkedSubCheckboxes = $(subCheckboxes.find("input:checkbox:checked"));
-
-			for(var i = 0; i < checkedSubCheckboxes.length; i++) {
-				var item = $(checkedSubCheckboxes[i]);
-			}
-		}
-	}
-	else {
-		var year = $(this).data('year');
-		var day = $(this).data('day');
-	}
-
-	RefreshMap();
-});

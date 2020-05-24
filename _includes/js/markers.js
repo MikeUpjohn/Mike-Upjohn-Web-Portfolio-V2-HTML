@@ -9,7 +9,7 @@ var markers =
 		'properties': {
 			'year': 2015,
 			'day': 1,
-			'description':'<b>Cisco, TX</b><br/><p>Stopped here for lunch before the storm chase began.</p><a style="font-weight:bold" href="http://www.mike-upjohn.co.uk/">Click to access BBC</a>',
+			'description':'<b>Cisco, TX</b><br/><p>Stopped here for lunch before the storm chase began.</p><a style="font-weight:bold" target="_blank" href="http://www.mike-upjohn.co.uk/">Click to access BBC</a>',
 		}
 	},
 	{
