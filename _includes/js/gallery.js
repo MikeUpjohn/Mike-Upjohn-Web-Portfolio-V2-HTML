@@ -4,6 +4,7 @@ $(document).ready(function() {
 	});*/
 
 	$(".gallery-item").mouseenter(function(e) {
+		console.log("mouse entered");
 		var galleryTitle = $(this).find($(".gallery-title"));
 		var galleryItemHeight = $(this).find($(".gallery-image")).height();
 
