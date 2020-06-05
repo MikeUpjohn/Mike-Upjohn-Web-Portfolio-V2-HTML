@@ -38,6 +38,13 @@ border-radius:0px;
 	text-decoration: none;
 }
 
+.gallery-title-text {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .gallery-main-title {
 	text-align:center !important;
 	font-size:2.0em !important;
