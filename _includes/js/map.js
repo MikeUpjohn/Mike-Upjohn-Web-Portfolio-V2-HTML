@@ -8,6 +8,7 @@ $("#storm-chase-map").click(function(e) {
 
     lockMap();
 
+	$("#flyout-map").width($(window).width()); // double check the width. Fix for some pages...
     $("#flyout-map").animate({"left":"0"}, "slow");
 	$("#flyout-map-area").height($(window).height() - mapTopNavigationHeight);
 
@@ -20,7 +21,7 @@ $("#flyout-map-close").click(function(e) {
 	e.preventDefault();
 	$("#flyout-map").animate({"left":"-1903"}, "slow"); // TODO: Make this dynamic...
 
-	window.removeEventListener('scroll', LockMap);
+	window.removeEventListener('scroll', lockMap);
 });
 
 $(".control-panel .form-check-input").click(function(e) {

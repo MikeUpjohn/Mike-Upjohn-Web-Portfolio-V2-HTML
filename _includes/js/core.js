@@ -1,5 +1,5 @@
-var height = $(window).height();
-var width = $(window).width();
+var height;
+var width;
 var bannerImageHeight = 0;
 
 SetBannerHeight();
@@ -16,6 +16,7 @@ $(window).resize(function() {
 });
 
 function GetBannerHeight() {
+	height = $(window).height();
 	if(height < 450) {
 		bannerImageHeight = 450;
 	}
@@ -56,6 +57,9 @@ $("#mobile-navigation-toggle").click(function() {
 });
 
 $(document).ready(function() {
+	width = $(window).width();
+	height = $(window).height();
+
 	if($(".flyout-map") !== undefined) {
 		$(".flyout-map").width(width);
 		$(".flyout-map").height(height);
