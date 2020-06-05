@@ -2,8 +2,13 @@
 	max-width:80%;
 }
 
+.gallery-content {
+	padding-top:10px;
+}
+
 .gallery-item {
 	overflow:hidden;
+	margin:10px;
 }
 
 .gallery-item img {
