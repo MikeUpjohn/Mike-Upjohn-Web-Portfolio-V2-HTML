@@ -67,3 +67,38 @@
 	display:block;
 	cursor: pointer;
 }
+
+.gallery-details .lightbox {
+	display:none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.gallery-details .image-holder {
+	opacity:1;
+	max-width:60%;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#FFFFFF;
+}
+
+.gallery-details .image-holder img {
+	max-width:100%;
+}
+
+.gallery-details .caption {
+	max-width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gallery-details .caption span {
+    text-align: right;
+    max-width: 100%;
+    display: block;
+    color: #F5F5F5;
+}
