@@ -335,6 +335,16 @@ footer .right-footer {
 	text-align:right;
 }
 
+/* Lightbox Modals */
+.close, .close:hover {
+	font-size:3.0em;
+	color:#FFFFFF;
+	margin-top:20px;
+	margin-right:20px;
+	margin-bottom:20px;
+	display:block;
+}
+
 /* Mobile navigation */
 #menu {
 	background-color:#26163b;

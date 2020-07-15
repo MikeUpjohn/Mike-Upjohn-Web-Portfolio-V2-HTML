@@ -2,15 +2,6 @@
 	background-color: #262626;
 }
 
-.close, .close:hover {
-	font-size:3.0em;
-	color:#FFFFFF;
-	margin-top:20px;
-	margin-right:20px;
-	margin-bottom:20px;
-	display:block;
-}
-
 #flyout-map-area {
 	background-color:white;
 	height:400px;
