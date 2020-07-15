@@ -106,3 +106,21 @@
     color: #F5F5F5;
     font-family: Agenda, Arial, sans-serif;
 }
+
+.gallery-details .gallery-controls {
+    font-size: 10em;
+	position: fixed;
+    top: 45%;
+}
+
+.gallery-details .gallery-controls a {
+    color: white;
+}
+
+.gallery-controls-left {
+    left: 5%;
+}
+
+.gallery-controls-right {
+    right: 5%;
+}
