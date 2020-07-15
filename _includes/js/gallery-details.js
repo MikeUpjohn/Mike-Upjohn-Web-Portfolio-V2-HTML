@@ -14,6 +14,16 @@ $(".lightbox").click(function(e) {
 	}
 });
 
+$("#previous-gallery-item").click(function(e) {
+	e.stopPropagation();
+	console.log("go left");
+});
+
+$("#next-gallery-item").click(function(e) {
+	e.stopPropagation();
+	console.log("go right");
+});
+
 function fadeImageIn() {
 	$.when($("#lightbox").fadeIn(750)).done(function() {
 		$("#lightbox").data('display', true);
