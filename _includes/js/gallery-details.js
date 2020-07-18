@@ -5,20 +5,23 @@ var last;
 var next;
 var totalItems;
 
+$(document).ready(function() {
+	totalItems = $(".gallery-item").length;
+});
+
 $(".gallery-item").click(function(e) {
 	e.preventDefault();
 
 	imageUrl = $(this).data('imageurl');
 	caption = $(this).data('caption');
 	itemNumber = $(this).data('item');
-	totalItems = $("#gallery-item").length;
 
 	if(itemNumber === 0) {
 		last = 0;
-		next = itemNumber++;
+		next = itemNumber + 1;
 	}
 	else if(itemNumber === totalItems) {
-		last = itemNumber--;
+		last = itemNumber - 1;
 		next = 0;
 	}
 
@@ -42,7 +45,12 @@ $("#previous-gallery-item").click(function(e) {
 	e.stopPropagation();
 	e.preventDefault();
 
-	itemNumber--;
+	if(itemNumber === 1) {
+		itemNumber = totalItems;
+	}
+	else {
+		itemNumber--;
+	}
 
 	var lastItem = $(".gallery-item[data-item='" + itemNumber + "']");
 	changeGalleryImage(lastItem.data("imageurl"), lastItem.data("caption"));
@@ -52,7 +60,12 @@ $("#next-gallery-item").click(function(e) {
 	e.stopPropagation();
 	e.preventDefault();
 
-	itemNumber++;
+	if(itemNumber === totalItems) {
+		itemNumber = 1;
+	}
+	else {
+		itemNumber++;	
+	}
 
 	var nextItem = $(".gallery-item[data-item='" + itemNumber + "']");
 	changeGalleryImage(nextItem.data("imageurl"), nextItem.data("caption"));
