@@ -23,6 +23,8 @@ $(".gallery-item").click(function(e) {
 	}
 
 	fadeLightboxIn(imageUrl, caption);
+
+	console.log(itemNumber);
 });
 
 $("#gallery-image-close").click(function(e) {
@@ -40,17 +42,20 @@ $("#previous-gallery-item").click(function(e) {
 	e.stopPropagation();
 	e.preventDefault();
 
-	// get last image data
-	console.log("go left");
+	itemNumber--;
 
+	var lastItem = $(".gallery-item[data-item='" + itemNumber + "']");
+	changeGalleryImage(lastItem.data("imageurl"), lastItem.data("caption"));
 });
 
 $("#next-gallery-item").click(function(e) {
 	e.stopPropagation();
 	e.preventDefault();
 
-	// get next image data
-	console.log("go right");
+	itemNumber++;
+
+	var nextItem = $(".gallery-item[data-item='" + itemNumber + "']");
+	changeGalleryImage(nextItem.data("imageurl"), nextItem.data("caption"));
 });
 
 function fadeLightboxIn(imageUrl, caption) {
@@ -68,12 +73,12 @@ function fadeLightboxOut() {
 }
 
 function changeGalleryImage(imageUrl, caption) {
-	$("#lightbox .image-holder img").attr('src', imageUrl);
-	$("#lightbox .caption span").text(caption);
+	$("#lightbox-gallery-image").attr('src', imageUrl);
+	$("#gallery-caption").text(caption);
 }
 
 function loadLightbox() {
-	$.when($("#lightbox .image-holder").add($("#lightbox .image-holder img")).add($("#lightbox .caption")).fadeIn(750)).done(function() {
+	$.when($("#lightbox .image-holder").add($("#lightbox-gallery-image")).add($("#lightbox .caption")).fadeIn(750)).done(function() {
 		$("#lightbox").fadeIn(750);
 		$("#lightbox").data('display', true);
 	});		
