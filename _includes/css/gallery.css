@@ -54,12 +54,17 @@
 	text-align:center !important;
 	font-size:2.0em !important;
 	color:#000000;
+    font-family: Agenda, "Arial", sans-serif;
+	font-weight:bold;
+	display:block;
 }
 
 .gallery-sub-title {
 	text-align:center !important;
 	font-size:1.3em !important;
+    font-family: Agenda, "Arial", sans-serif;
 	color:#000000;
+	display:block;
 }
 
 /** Gallery Details **/
