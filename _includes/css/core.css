@@ -208,6 +208,12 @@ body {
 	margin-top:7.0em;
 }
 
+.form-component .validation-error {
+    float: right;
+    color: red;
+    font-family: "Segoe UI";
+}
+
 .view-details {
 	padding: 20px 20px 20px 20px;
 	background-color:#9570D9;
@@ -317,7 +323,7 @@ footer .footer-links li {
 }
 
 footer .footer-links li::after {
-	content:'•';
+	content:'\2219';
 }
 
 footer .footer-links li.last::after {

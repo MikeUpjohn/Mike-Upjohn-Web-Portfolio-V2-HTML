@@ -175,6 +175,10 @@ body.technologies {
 	list-style-type: none;
 }
 
+.social-icon {
+	margin-right:5px;
+}
+
 #map {
 	width:100%;
 	height:450px;

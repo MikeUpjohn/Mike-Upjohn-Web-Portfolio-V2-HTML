@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="_includes/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="_includes/css/core.css" rel="stylesheet">
     <link href="_includes/css/additional.css" rel="stylesheet">
     <link href="_includes/css/mobile.css" rel="stylesheet">
@@ -91,9 +92,14 @@
                     <div class="content-area">
                         <h3 class="white-title"><span>Ways To Get In Touch</span></h3>
                         <ul class="contact-options">
-                            <li><b>General Enquiries: </b><a href="mailto:hello@mike-upjohn.co.uk">hello@mike.upjohn.co.uk</a></li>
-                            <li><b>Need a Developer?: </b><a href="development@mike-upjohn.co.uk">development@mike.upjohn.co.uk</a></li>
-                            <li><b>LinkedIn: </b><a href="http://www.linkedin.com/">LinkedIn</a></li>
+                            <li>
+                                <i class="fa fa-at social-icon" aria-hidden="true"></i>
+                                <a href="mailto:hello@mike-upjohn.co.uk">hello@mike.upjohn.co.uk</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-twitter social-icon" aria-hidden="true"></i>
+                                <a href="http://www.twitter.com/MikeUpjohn" target="_blank">Twitter</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -121,6 +127,7 @@
                                                 <div class="col-xs-12 item-no-padding">
                                                     <label>Your Name: </label>
                                                     <span class="validation-asterisk">*</span>
+                                                    <span class="validation-error">This is a required field.</span>
                                                 </div>
                                                 <div class="col-xs-12 item-no-padding">
                                                     <input type="text" placeholder="Your Name" />
@@ -132,6 +139,7 @@
                                                 <div class="col-xs-12 item-no-padding">
                                                     <label>Your Email Address: </label>
                                                     <span class="validation-asterisk">*</span>
+                                                    <span class="validation-error">This is a required field.</span>
                                                 </div>
                                                 <div class="col-xs-12 item-no-padding">
                                                     <input type="text" placeholder="Your Email Address" />
@@ -143,6 +151,7 @@
                                                 <div class="col-xs-12 item-no-padding">
                                                     <label>What's your enquiry about?: </label>
                                                     <span class="validation-asterisk">*</span>
+                                                    <span class="validation-error">This is a required field.</span>
                                                 </div>
                                                 <div class="col-xs-12 item-no-padding">
                                                     <select>
@@ -161,6 +170,7 @@
                                                 <div class="col-xs-12 item-no-padding">
                                                     <label>Your Message: </label>
                                                     <span class="validation-asterisk">*</span>
+                                                    <span class="validation-error">This is a required field.</span>
                                                 </div>
                                                 <div class="col-xs-12 item-no-padding">
                                                     <textarea placeholder="Your Message"></textarea>
