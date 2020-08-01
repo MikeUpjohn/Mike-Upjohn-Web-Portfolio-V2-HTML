@@ -66,7 +66,7 @@ function loadMap() {
 		mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZXVwam9obiIsImEiOiJjazk2enRjbHQwODB5M2xtanB6bGtoOW9zIn0.QKZt26yxRxYmzMa6i1RkYQ';
 		map = new mapboxgl.Map({
 			container: 'flyout-map-area',
-			style: 'mapbox://styles/mapbox/dark-v10',
+			style: 'mapbox://styles/mapbox/streets-v11',
 			center: [-97.008434, 32.835795], // TODO: Make this dynamic...
 			zoom: 6
 		});
