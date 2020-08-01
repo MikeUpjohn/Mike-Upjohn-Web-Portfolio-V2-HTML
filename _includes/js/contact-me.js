@@ -1,20 +1,14 @@
-var map;
-var center = {lat: 53.286604, lng: -2.213044};
-
 function initMap() {
-	map = new google.maps.Map(document.getElementById('map'), {
-		center: center,
-		zoom: 12
-	});
-
-	map.setOptions({
-		draggable: false,
-		zoomControl: false,
-		scrollWheel: false,
-		disableDoubleClickZoom: true
-	})
-	
-	google.maps.event.addDomListener(window, 'resize', function() {
-		map.setCenter(center);
+	let contactMap = $("#contact-map");
+	mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZXVwam9obiIsImEiOiJjazk2enRjbHQwODB5M2xtanB6bGtoOW9zIn0.QKZt26yxRxYmzMa6i1RkYQ';
+	map = new mapboxgl.Map({
+		container: 'contact-map',
+		style: 'mapbox://styles/mapbox/dark-v10',
+		center: [-2.249217, 53.260956],
+		zoom: 9
 	});
 }
+
+$(document).ready(function() {
+	initMap();
+});
