@@ -134,6 +134,10 @@
 		background: rgba(54,41,70,0.5);
 	}
 
+	.detail-page .navbar-default {
+		background: rgba(54,41,70,1);
+	}
+
 	.dropdown-toggle::after {
 		display: inline-block;
 		width: 0;
@@ -153,8 +157,11 @@
 	
 	.dropdown-menu {
 		width:250px;
-		/* background-color:rgba(54,41,70,0.9); */
 		background: rgba(54,41,70,0.5);
+	}
+
+	.detail-page .dropdown-menu {
+		background: rgba(54,41,70,1);
 	}
 	
 	.dropdown-menu a {
