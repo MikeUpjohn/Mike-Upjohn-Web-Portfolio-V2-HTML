@@ -183,4 +183,8 @@ body.technologies {
 	width:100%;
 	height:450px;
 }
+
+.contact-me .content-area ul {
+	margin-bottom:0em;
+}
 /* End Contact Me */
