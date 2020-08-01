@@ -136,22 +136,6 @@
 	}
 /* End Projects */
 
-/* Technologies */
-body.technologies {
-	background-color: #FFFFFF;
-}
-
-.technologies h1 {
-	margin-top: 0px;
-}
-
-.technologies h1 {
-	font-family: "Segoe UI Black", "Arial", sans-serif;
-	font-size:5.0em;
-	color:#34274D;
-}
-/* End Technologies */
-
 /* Blog Details */
 .detail-page h1 {
 	font-size:2.0em;
