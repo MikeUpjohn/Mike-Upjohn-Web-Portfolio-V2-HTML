@@ -22,6 +22,10 @@ body {
 	background-color: #26163b;
 }
 
+::selection {
+	background: #E1D4F1;
+}
+
 .outer-banner-container {
     display: block;
     position: relative;
