@@ -3,7 +3,7 @@ let routesLayer;
 let mapTopNavigationHeight = $("#flyout-map-close").outerHeight(true); // True to include margin
 let activeMarkers = [];
 
-$("#storm-chase-map").click(function(e) {
+$("#storm-chase-map, #storm-chase-map-link").click(function(e) {
  	e.preventDefault();
 
     lockMap();
