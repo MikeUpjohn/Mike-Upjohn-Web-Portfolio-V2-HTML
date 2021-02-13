@@ -1,11 +1,13 @@
 @media (max-width: 767px) {
 	.homepage .banner-image {
-		background: url('../../_includes/img/banner-image-02.jpg') no-repeat -800px center local;
+		/* Change the px value here to determine where the banner sits left to right on mobile */
+		background: url('../../_includes/img/banner-image-02.jpg') no-repeat -100px center local;
 		background-size: cover;
 	}
 
 	.projects .banner-image, .blog .banner-image, .contact-me .banner-image {
-		background: url('../../_includes/img/banner-image-02.jpg') no-repeat -339px center local;
+		/* Change the px value here to determine where the banner sits left to right on mobile */
+		background: url('../../_includes/img/banner-image-02.jpg') no-repeat -100px center local;
 		background-size: cover;
 	}
 
