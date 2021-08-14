@@ -1,0 +1,51 @@
+#main-menu {
+	position:absolute;
+	background: rgba(54, 41, 70, 0.5);
+	padding: 0px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+	font-family: "Agenda", sans-serif;
+	font-size: 1.05em;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 15px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+	text-decoration: underline;
+}
+
+.navbar-expand-lg .navbar-nav:last-child {
+	margin-right: 30px;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-item {
+	font-family: "Agenda", sans-serif;
+	font-size: 1.1em;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.navbar-expand-lg .navbar-nav .nav-item.standout-item {
+	margin-left: 30px;
+	font-size: 1.1em;
+}
+
+.navbar-expand-lg ul li a:hover, .navbar-expand-lg ul li a:visited {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+	top: 56px;
+	margin: 0px;
+	border: 0px;
+	border-radius: 0px;
+	background: rgba(54, 41, 70, 0.5);
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu li a:hover {
+	text-decoration: underline;
+	background: transparent;
+}

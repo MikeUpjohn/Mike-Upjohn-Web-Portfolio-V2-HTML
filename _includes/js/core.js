@@ -40,29 +40,3 @@ function SetBannerHeight() {
 		}
 	}
 }
-
-$("#mobile-navigation-toggle").click(function() {
-	var expanded = $(this).attr('aria-expanded');
-
-	if(expanded == "true") {
-		$(this).attr('aria-expanded','false');
-		$("#main").animate({marginLeft:'0px'},'slow');   
-	}
-	else {
-		$(this).attr('aria-expanded','true');
-		$("#main").animate({marginLeft:'260px'},'slow');   
-	}
-
-	$(".navbar-toggle").blur();
-});
-
-$(document).ready(function() {
-	width = $(window).width();
-	height = $(window).height();
-
-	if($(".flyout-map") !== undefined) {
-		$(".flyout-map").width(width);
-		$(".flyout-map").height(height);
-		$(".flyout-map").css({left: -width});
-	}
-});
