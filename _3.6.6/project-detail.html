@@ -1,0 +1,543 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Mike Upjohn - Centralised Tornado Data Repository</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="_includes/css/core.css" rel="stylesheet">
+    <link href="_includes/css/additional.css" rel="stylesheet">
+    <link href="_includes/css/mobile.css" rel="stylesheet">
+    <link href="_includes/css/horizontal-titles.css" rel="stylesheet">
+    <link href="_includes/css/flyout-map.css" rel="stylesheet">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+
+    <link rel="shortcut icon" type="image/png" href="_includes/img/favicon.png" />
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+</head>
+<body class="detail-page">
+    <div id="main">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="standout-item">
+                            <a href="#" id="storm-chase-map">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </a>
+                        </li>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Storm Chase Blogs</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="blog.html">Arizona Monsoon Chase 2019</a>
+                                <a class="dropdown-item" href="blog.html">Storm Chase 2019</a>
+                                <a class="dropdown-item" href="blog.html">Storm Chase 2018</a>
+                                <a class="dropdown-item" href="blog.html">Storm Chase 2017</a>
+                                <a class="dropdown-item" href="blog.html">Storm Chase 2016</a>
+                                <a class="dropdown-item" href="blog.html">Storm Chase 2015</a>
+                            </div>
+                        </li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a id="storm-chase-map-link" href="#">Map</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact-me.html">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-header">
+                    <!-- <a class="navbar-brand">WebSiteName</a> -->
+                    <div class="navbar-header-left">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" id="mobile-navigation-toggle">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar first-icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- <a class="navbar-brand" href="#">Brand</a> -->
+                    </div>
+                    <div class="navbar-header-right">
+                        Mike Upjohn
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 row-no-padding white-area">
+                    <div class="content-area large-padding">
+                        <img src="_includes/img/project-banner-image.jpg" alt="Project Image" class="details-image">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 row-no-padding purple-area">
+                    <div class="content-area">
+                        <h1>Centralised Tornado Data Repository</h1>
+                        <h2>December 2015</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla lorem at lacinia maximus. Morbi volutpat sagittis diam sit amet tempor. In et faucibus massa. Morbi id congue enim. Aliquam ac efficitur massa, eget dapibus mi. Proin vel tellus libero. Sed suscipit bibendum commodo. Integer iaculis nunc vitae lobortis egestas. Fusce venenatis mauris nec metus auctor laoreet. Donec tincidunt tincidunt sapien sit amet rhoncus. Nam porttitor non enim ac fringilla. Nulla sed tristique odio. Proin eu nunc vel lacus fermentum sodales.</p>
+
+                        <p>Integer non nulla sed lacus dictum porttitor vitae bibendum quam. Cras vel eros eget purus molestie facilisis. Aenean tincidunt ut erat nec cursus. Suspendisse vitae commodo justo. Suspendisse auctor ipsum convallis mauris laoreet, at rutrum purus condimentum. Phasellus ac scelerisque arcu. Morbi hendrerit dui elit. Mauris sit amet quam quis leo efficitur tristique. Maecenas ut ante pretium, consectetur massa eget, tincidunt lectus. Proin sed ligula nisi. Aliquam facilisis, urna et placerat viverra, eros nisi tristique turpis, vel maximus ligula justo vel dui. Fusce blandit augue at malesuada finibus. Morbi a mi vitae enim malesuada egestas. Vestibulum vestibulum laoreet tellus nec interdum. Donec rutrum ipsum eu magna bibendum consequat. Suspendisse potenti.</p>
+
+                        <p>Donec ut augue nec ante sodales aliquam sed eget mauris. Proin ut massa pulvinar, malesuada nunc eu, auctor metus. Nullam magna purus, cursus eu laoreet quis, cursus vitae lacus. Duis iaculis rutrum ex non sodales. Sed vitae nunc ac nibh commodo fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis maximus elementum dui eu faucibus. Duis eget vehicula dui. Quisque eu enim fermentum, elementum diam aliquet, ornare justo.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla lorem at lacinia maximus. Morbi volutpat sagittis diam sit amet tempor. In et faucibus massa. Morbi id congue enim. Aliquam ac efficitur massa, eget dapibus mi. Proin vel tellus libero. Sed suscipit bibendum commodo. Integer iaculis nunc vitae lobortis egestas. Fusce venenatis mauris nec metus auctor laoreet. Donec tincidunt tincidunt sapien sit amet rhoncus. Nam porttitor non enim ac fringilla. Nulla sed tristique odio. Proin eu nunc vel lacus fermentum sodales.</p>
+
+                        <p>Integer non nulla sed lacus dictum porttitor vitae bibendum quam. Cras vel eros eget purus molestie facilisis. Aenean tincidunt ut erat nec cursus. Suspendisse vitae commodo justo. Suspendisse auctor ipsum convallis mauris laoreet, at rutrum purus condimentum. Phasellus ac scelerisque arcu. Morbi hendrerit dui elit. Mauris sit amet quam quis leo efficitur tristique. Maecenas ut ante pretium, consectetur massa eget, tincidunt lectus. Proin sed ligula nisi. Aliquam facilisis, urna et placerat viverra, eros nisi tristique turpis, vel maximus ligula justo vel dui. Fusce blandit augue at malesuada finibus. Morbi a mi vitae enim malesuada egestas. Vestibulum vestibulum laoreet tellus nec interdum. Donec rutrum ipsum eu magna bibendum consequat. Suspendisse potenti.</p>
+
+                        <p>Donec ut augue nec ante sodales aliquam sed eget mauris. Proin ut massa pulvinar, malesuada nunc eu, auctor metus. Nullam magna purus, cursus eu laoreet quis, cursus vitae lacus. Duis iaculis rutrum ex non sodales. Sed vitae nunc ac nibh commodo fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis maximus elementum dui eu faucibus. Duis eget vehicula dui. Quisque eu enim fermentum, elementum diam aliquet, ornare justo.</p>
+                        <a class="view-details" href="#">View the Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 row-no-padding dark-grey-area">
+                    <footer>
+                        <div class="left-footer">&copy; Michael Upjohn 2020</div>
+                        <div class="right-footer">
+                            <ul class="footer-links">
+                                <li>
+                                    <a href="projects.html">Projects</a>
+                                </li>
+                                <li>
+                                    <a href="blog.html">Blogs</a>
+                                </li>
+                                <li class="last">
+                                    <a href="gallery.html">Gallery</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="menu" class="nav-collapse">
+        <ul>
+            <li class="brand">Mike Upjohn</li>
+            <li class="home"><a href="index.html">Home</a></li>
+            <li>
+                <a href="blog.html">Storm Chase Blogs</a>
+                <ul class="mobile-sub-menu">
+                    <li><a href="blog.html">Arizona Monsoon Chase 2019</a></li>
+                    <li><a href="blog.html">Storm Chase 2019</a></li>
+                    <li><a href="blog.html">Storm Chase 2018</a></li>
+                    <li><a href="blog.html">Storm Chase 2017</a></li>
+                    <li><a href="blog.html">Storm Chase 2016</a></li>
+                    <li><a href="blog.html">Storm Chase 2015</a></li>
+                </ul>
+            </li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact-me.html">Contact Me</a></li>
+        </ul>
+    </div>
+    <div id="flyout-map" class="flyout-map">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg">
+                    <button type="button" class="close" id="flyout-map-close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="row recent-chases">
+                <div class="col-md-2">
+                    <div class="control-panel">
+                        <h3>Recent Chases</h3>
+                        <div class="form-check">
+                            <input class="form-check-input parent" type="checkbox" id="2015-storm-chases" data-year="2015" data-day="0" data-toggle="collapse" data-target="#checkboxes-2015" />
+                            <label class="form-check-label" for="2015-storm-chases">
+                                2015 Storm Chases
+                                <span class="glyphicon glyphicon-triangle-bottom" data-target="#checkboxes-2015"></span>
+                            </label>
+                            <div class="sub-checkboxes collapse" id="checkboxes-2015">
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="7-may-2015">
+                                            <input class="form-check-input" type="checkbox" id="7-may-2015" data-year="2015" data-day="1" />
+                                            7 May 2015
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style='background-color:#F7455D'></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="8-may-2015">
+                                            <input class="form-check-input" type="checkbox" id="8-may-2015" data-year="2015" data-day="2" />
+                                            8 May 2015
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style='background-color:#FFA600'></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="9-may-2015">
+                                            <input class="form-check-input" type="checkbox" id="9-may-2015" data-year="2015" data-day="3" />
+                                            9 May 2015
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input parent" type="checkbox" id="2016-storm-chases" />
+                            <label class="form-check-label" for="2016-storm-chases">
+                                2016 Storm Chases
+                                <span class="glyphicon glyphicon-triangle-bottom" data-target="#checkboxes-2016"></span>
+                            </label>
+                            <div class="sub-checkboxes collapse" id="checkboxes-2016">
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="16-may-2016">
+                                            <input class="form-check-input" type="checkbox" id="16-may-2016" data-year="2016" data-day="1" />
+                                            16 May 2016
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="17-may-2016">
+                                            <input class="form-check-input" type="checkbox" id="17-may-2016" data-year="2016" data-day="2" />
+                                            17 May 2016
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="18-may-2016">
+                                            <input class="form-check-input" type="checkbox" id="18-may-2016" data-year="2016" data-day="3" />
+                                            18 May 2016
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="19-may-2016">
+                                            <input class="form-check-input" type="checkbox" id="19-may-2016" data-year="2016" data-day="4" />
+                                            19 May 2016
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="20-may-2016">
+                                            <input class="form-check-input" type="checkbox" id="20-may-2016" data-year="2016" data-day="5" />
+                                            20 May 2016
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input parent" type="checkbox" id="2017-storm-chases" />
+                            <label class="form-check-label" for="2017-storm-chases">
+                                2017 Storm Chases
+                                <span class="glyphicon glyphicon-triangle-bottom" data-target="#checkboxes-2017"></span>
+                            </label>
+                            <div class="sub-checkboxes collapse" id="checkboxes-2017">
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="7-may-2017">
+                                            <input class="form-check-input" type="checkbox" id="7-may-2017" data-year="2017" data-day="1" />
+                                            7 May 2017
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="8-may-2017">
+                                            <input class="form-check-input" type="checkbox" id="8-may-2017" data-year="2017" data-day="2" />
+                                            8 May 2017
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="9-may-2017">
+                                            <input class="form-check-input" type="checkbox" id="9-may-2017" data-year="2017" data-day="3" />
+                                            9 May 2017
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="10-may-2017">
+                                            <input class="form-check-input" type="checkbox" id="10-may-2017" data-year="2017" data-day="4" />
+                                            10 May 2017
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="11-may-2017">
+                                            <input class="form-check-input" type="checkbox" id="11-may-2017" data-year="2017" data-day="5" />
+                                            11 May 2017
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input parent" type="checkbox" id="2018-storm-chases" />
+                            <label class="form-check-label" for="2018-storm-chases">
+                                2018 Storm Chases
+                                <span class="glyphicon glyphicon-triangle-bottom" data-target="#checkboxes-2018"></span>
+                            </label>
+                            <div class="sub-checkboxes collapse" id="checkboxes-2018">
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="12-june-2018">
+                                            <input class="form-check-input" type="checkbox" id="12-june-2018" data-year="2018" data-day="1" />
+                                            12 June 2018
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="13-june-2018">
+                                            <input class="form-check-input" type="checkbox" id="13-june-2018" data-year="2018" data-day="2" />
+                                            13 June 2018
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style='background-color:#C4C4C4'></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="14-june-2018">
+                                            <input class="form-check-input" type="checkbox" id="14-june-2018" data-year="2018" data-day="3" />
+                                            14 June 2018
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="15-june-2018">
+                                            <input class="form-check-input" type="checkbox" id="15-june-2018" data-year="2018" data-day="4" />
+                                            15 June 2018
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="16-june-2018">
+                                            <input class="form-check-input" type="checkbox" id="16-june-2018" data-year="2018" data-day="5" />
+                                            16 June 2018
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input parent" type="checkbox" id="2019-storm-chases" />
+                            <label class="form-check-label" for="2019-storm-chases">
+                                2019 Storm Chases
+                                <span class="glyphicon glyphicon-triangle-bottom" data-target="#checkboxes-2019"></span>
+                            </label>
+                            <div class="sub-checkboxes collapse" id="checkboxes-2019">
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="15-may-2019">
+                                            <input class="form-check-input" type="checkbox" id="15-may-2019" data-year="2019" data-day="1" />
+                                            15 May 2019
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="16-may-2019">
+                                            <input class="form-check-input" type="checkbox" id="16-may-2019" data-year="2019" data-day="2" />
+                                            16 May 2019
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="17-may-2019">
+                                            <input class="form-check-input" type="checkbox" id="17-may-2019" data-year="2019" data-day="3" />
+                                            17 May 2019
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="18-may-2019">
+                                            <input class="form-check-input" type="checkbox" id="18-may-2019" data-year="2019" data-day="4" />
+                                            18 May 2019
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox">
+                                    </div>
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="19-may-2019">
+                                            <input class="form-check-input" type="checkbox" id="19-may-2019" data-year="2019" data-day="5" />
+                                            19 May 2019
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input parent" type="checkbox" id="2019-arizona-monsoon-chases" />
+                            <label class="form-check-label" for="2019-arizona-monsoon-chases">
+                                2019 Arizona Monsoon Chases
+                                <span class="glyphicon glyphicon-triangle-bottom" data-target="#checkboxes-arizona-2019"></span>
+                            </label>
+                            <div class="sub-checkboxes collapse" id="checkboxes-arizona-2019">
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="11-august-2019">
+                                            <input class="form-check-input" type="checkbox" id="11-august-2019" data-year="2019" data-day="11" />
+                                            11 August 2019
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="12-august-2019">
+                                            <input class="form-check-input" type="checkbox" id="12-august-2019" data-year="2019" data-day="12" />
+                                            12 August 2019
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="13-august-2019">
+                                            <input class="form-check-input" type="checkbox" id="13-august-2019" data-year="2019" data-day="13" />
+                                            13 August 2019
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="14-august-2019">
+                                            <input class="form-check-input" type="checkbox" id="14-august-2019" data-year="2019" data-day="14" />
+                                            14 August 2019
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="15-august-2019">
+                                            <input class="form-check-input" type="checkbox" id="15-august-2019" data-year="2019" data-day="15" />
+                                            15 August 2019
+                                        </label>
+                                    </div>
+                                    <div class="map-line-color">
+                                        <span class="map-line-color-marker" style=''></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="map" id="flyout-map-area" data-loaded="false"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/font-awesome.js"></script>
+    <script src="_includes/js/core.js"></script>
+    <script src="_includes/js/geojson.js"></script>
+    <script src="_includes/js/map.js"></script>
+    <script src="_includes/js/markers.js"></script>
+    <script src="_includes/js/route-maps.js"></script>
+</body>
+</html>
