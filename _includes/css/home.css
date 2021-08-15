@@ -1,0 +1,10 @@
+.homepage .banner-image {
+	position: static;
+	top:0px;
+	width: 100%;
+}
+
+.homepage .banner-image img {
+	padding-left:0px;
+	width:100%;
+}
