@@ -104,8 +104,40 @@ body {
 	margin-bottom:1.5em;
 }
 
-.content-area p{
+.content-area h4, .content-area p {
+	color: #333333;
+}
+
+.content-area .item-date {
+	font-size: 1.05em;
+	font-family: "Segoe UI Light", "Arial", sans-serif;
+}
+
+.content-area p {
 	font-family: "Segoe UI Light","Arial", sans-serif;
 	font-size:1.2em;
 	text-align: center;
+}
+
+.view-details {
+	padding: 20px 20px 20px 20px;
+	background-color:#9570D9;
+	color:#000000;
+
+	font-family:"Segoe UI Semibold","Arial", sans-serif;
+	font-size:1.1em;
+	text-align: center;
+
+	display:block;
+	width:80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:1.2em;
+
+	text-decoration: none;
+}
+
+.view-details:hover {
+	color:#D4B8F8;
+	text-decoration: underline;
 }

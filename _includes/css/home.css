@@ -8,3 +8,22 @@
 	padding-left:0px;
 	width:100%;
 }
+
+/* Latest Project */
+.content-area .latest-project {
+	text-align: right;
+	margin-bottom:2.5em;
+}
+
+.content-area .latest-project h4 {
+	font-size:1.4em;
+}
+
+.content-area .latest-project p {
+	text-align: right;
+}
+
+.content-area .latest-project .project-image img {
+	width:100%;
+	height:auto;
+}
