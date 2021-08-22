@@ -15,7 +15,7 @@
 	margin-bottom:2.5em;
 }
 
-.content-area .latest-project h4 {
+.content-area h4 {
 	font-size:1.4em;
 }
 
@@ -23,7 +23,11 @@
 	text-align: right;
 }
 
-.content-area .latest-project .project-image img {
+.content-area .latest-blog p {
+	text-align: left;
+}
+
+.content-area .latest-project .project-image img, .content-area .latest-blog .blog-image img {
 	width:100%;
 	height:auto;
 }
