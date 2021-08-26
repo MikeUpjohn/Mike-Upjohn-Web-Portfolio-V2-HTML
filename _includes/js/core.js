@@ -40,3 +40,14 @@ function SetBannerHeight() {
 		}
 	}
 }
+
+$(document).ready(function() {
+	width = $(window).width();
+	height = $(window).height();
+
+	if($(".flyout-map") !== undefined) {
+		$(".flyout-map").width(width);
+		$(".flyout-map").height(height);
+		$(".flyout-map").css({left: -width});
+	}
+});

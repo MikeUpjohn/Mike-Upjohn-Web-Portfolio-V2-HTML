@@ -1,0 +1,11 @@
+.flyout-map {
+	background-color: #262626;
+	position: absolute;
+}
+
+#flyout-map-area {
+	background-color:white;
+	height:400px;
+	margin-right:-15px;
+	margin-bottom:-15px;
+}
