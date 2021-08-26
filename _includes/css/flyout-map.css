@@ -9,3 +9,12 @@
 	margin-right:-15px;
 	margin-bottom:-15px;
 }
+
+.close, .close:hover {
+	font-size:3.0em;
+	color:#FFFFFF;
+	margin-top:20px;
+	margin-right:20px;
+	margin-bottom:20px;
+	display:block;
+}
