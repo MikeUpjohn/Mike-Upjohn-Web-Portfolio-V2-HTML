@@ -10,11 +10,39 @@
 	margin-bottom:-15px;
 }
 
-.close, .close:hover {
+/*.close, .close:hover {
 	font-size:3.0em;
 	color:#FFFFFF;
 	margin-top:20px;
 	margin-right:20px;
 	margin-bottom:20px;
 	display:block;
+}*/
+
+.close {
+	float:right;
+	font-size:3.0em;
+	background-color: transparent;
+	border: none;
+	color:#FFFFFF;
+	font-weight:700;
+	opacity:0.2;
+}
+
+.close {
+	float:right;
+	font-size:3.0em;
+	font-weight:bold;
+	opacity:0.2;
+	margin-top:20px;
+	margin-right:20px;
+	margin-bottom: 20px;
+}
+
+.close:hover {
+	opacity: 1;
+	color: #FFFFFF;
+}
+
+.close span {
 }
