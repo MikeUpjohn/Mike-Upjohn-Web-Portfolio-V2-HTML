@@ -119,6 +119,11 @@ body {
 	text-align: center;
 }
 
+.content-area ul {
+	font-family: "Segoe UI Light", "Arial", sans-serif;
+	font-size:1.3em;
+}
+
 .view-details {
 	padding: 20px 20px 20px 20px;
 	background-color:#9570D9;
