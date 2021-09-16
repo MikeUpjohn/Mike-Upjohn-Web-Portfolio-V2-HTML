@@ -23,8 +23,23 @@
 }
 
 /** Contact Form **/
+
 .form-component {
 	margin-bottom: 1.0em;
+}
+
+.form-component .form-control {
+	border-radius: 0px;
+	border: 1px solid #A9A9A9;
+	background-color: #D9D9D9;
+}
+
+.form-component label {
+	font-size: 0.9em;
+}
+
+.form-component textarea.form-control {
+	height: 140px;
 }
 
 .validation-asterisk, .validation-error {
@@ -37,12 +52,8 @@
 	float: right;
 }
 
-label {
-	font-size: 0.9em;
-}
-
-.form-component .form-control {
-	border-radius: 0px;
-	border: 1px solid #A9A9A9;
-	background-color: #D9D9D9;
+.form-component input[type=submit] {
+	background-color:#9570D9;
+	color:#000000;
+	border:0px;
 }
