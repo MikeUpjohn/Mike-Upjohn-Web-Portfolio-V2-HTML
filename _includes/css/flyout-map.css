@@ -35,6 +35,10 @@
 	display: inline-block;
 }
 
+.form-check-label svg {
+	margin-left: 5px;
+}
+
 .sub-checkboxes {
 	font-size: 0.9em;
 	background-color: #695C6E;
