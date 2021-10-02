@@ -35,7 +35,7 @@ $(".control-panel .form-check-input").click(function(e) {
 		// check all child checkboxes and then load all map days...
 		
 		let subCheckboxes = checkbox.parent().find(".sub-checkboxes");
-		if(subCheckboxes.hasClass("in")) {
+		if(subCheckboxes.hasClass("show")) {
 			// This section expanded already
 			if(isParentChecked) {
 				checkbox.parent().find(".sub-checkboxes input:checkbox").prop('checked', true);
