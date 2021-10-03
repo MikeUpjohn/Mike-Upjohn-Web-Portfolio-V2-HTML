@@ -55,6 +55,11 @@ $(".control-panel .form-check-input").click(function(e) {
 	refreshMap();
 });
 
+$(".control-panel .form-check-input, .control-panel .form-check-label").dblclick(function(e) {
+	console.log("oops, double clicked");
+	e.preventDefault();
+});
+
 function lockMap() {
   window.scrollTo(0, 0);
 }
