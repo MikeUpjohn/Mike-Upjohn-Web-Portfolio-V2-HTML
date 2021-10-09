@@ -86,6 +86,16 @@
 	border-radius: 2px;
 }
 
+.marker {
+  background-image: url('../img/map-pin.svg');
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  top:-12px !important;
+}
+
 /*.control-panel .glyphicon-triangle-bottom {
 	color:#C4C4C4;
 	font-size:0.8em;
