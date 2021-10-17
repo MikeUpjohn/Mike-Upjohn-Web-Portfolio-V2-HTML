@@ -182,3 +182,45 @@ body {
 	color:#000000;
 	border:0px;
 }
+
+/** Footer **/
+footer {
+	font-family: "Segoe UI Semibold", "Arial", sans-serif;
+	padding: 0.8em 0.8em 0.8em 0.8em;
+	font-size: 0.9em;
+}
+
+footer li a {
+	text-decoration: none;
+}
+
+footer li a:hover {
+	color: #D1D1D1;
+}
+
+footer .footer-links {
+	list-style-type: none;
+}
+
+footer .footer-links li {
+	display: inline;
+}
+
+footer .footer-links li::after {
+	content: '\2219';
+}
+
+footer .footer-links li.last::after {
+	content: '';
+}
+
+footer .left-footer {
+	width: 40%;
+	float: left;
+}
+
+footer .right-footer {
+	width: 40%;
+	float: right;
+	text-align: right;
+}
