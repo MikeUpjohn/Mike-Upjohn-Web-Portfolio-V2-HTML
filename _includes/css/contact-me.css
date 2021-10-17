@@ -21,39 +21,3 @@
 	width:100%;
 	height:450px;
 }
-
-/** Contact Form **/
-
-.form-component {
-	margin-bottom: 1.0em;
-}
-
-.form-component .form-control {
-	border-radius: 0px;
-	border: 1px solid #A9A9A9;
-	background-color: #D9D9D9;
-}
-
-.form-component label {
-	font-size: 0.9em;
-}
-
-.form-component textarea.form-control {
-	height: 140px;
-}
-
-.validation-asterisk, .validation-error {
-	color:#FF0000;
-	font-size: 0.8em;
-	display: inline-block;
-}
-
-.validation-error {
-	float: right;
-}
-
-.form-component input[type=submit] {
-	background-color:#9570D9;
-	color:#000000;
-	border:0px;
-}
