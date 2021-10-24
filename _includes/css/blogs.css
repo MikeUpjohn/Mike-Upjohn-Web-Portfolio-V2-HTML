@@ -1,0 +1,15 @@
+.item {
+	margin-top: 2.0em;
+}
+
+.item img {
+	width: 100%;
+}
+
+.right-item h4, .right-item h5, .right-item p {
+	text-align: right;
+}
+
+.left-item h4, .left-item h5, .left-item p {
+	text-align: left;
+}
