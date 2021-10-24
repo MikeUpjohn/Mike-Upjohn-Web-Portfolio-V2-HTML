@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="row row-no-padding">
-                <div class="col-xs-12 white-area">
+                <div class="col-xs-12 row-no-padding white-area">
                     <div class="content-area">
                         <h3 class="white-title"><span>Ways to Get in Touch</span></h3>
                         <ul class="contact-options">
@@ -106,12 +106,12 @@
                 </div>
             </div>
             <div class="row row-no-padding">
-                <div class="col-xs-12">
+                <div class="col-xs-12 row-no-padding">
                     <div id="contact-map"></div>
                 </div>
             </div>
             <div class="row row-no-padding">
-                <div class="col-xs-12 purple-area">
+                <div class="col-xs-12 row-no-padding purple-area">
                     <div class="row row-no-padding">
                         <div class="col-xs-12">
                             <div class="content-area">
@@ -252,7 +252,7 @@
     </div>
     <!-- Mobile Menu goes here -->
     <div id="flyout-map" class="flyout-map">
-        <div class="container-fluid">
+        <div class="container-fluid close-bar">
             <div class="row row-no-padding">
                 <div class="col-lg">
                     <button type="button" class="close" id="flyout-map-close" aria-label="Close">
@@ -261,12 +261,307 @@
                 </div>
             </div>
             <div class="row row-no-padding recent-chases">
-                <div class="col-lg-3" style="color: white;">
-                    <li>1 May 2015</li>
-                    <li>2 May 2015</li>
+                <div class="col-lg-2" style="color: white;">
+                    <div class="control-panel">
+                        <h3>Recent Chases</h3>
+                        <div class="form-check">
+                            <input class="form-check-input parent" type="checkbox" id="2015-storm-chases" data-year="2015" data-day="0" data-toggle="collapse" data-target="#checkboxes-2015" />
+                            <label class="form-check-label" for="2015-storm-chases">
+                                2015 Storm Chases
+                                <i class="fas fa-angle-down" data-target="#checkboxes-2015"></i>
+                            </label>
+                            <div class="sub-checkboxes collapse" id="checkboxes-2015">
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="7-may-2015">
+                                            <input class="form-check-input" type="checkbox" id="7-may-2015" data-year="2015" data-day="1" />7 May 2015
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#F7455D"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="8-may-2015">
+                                            <input class="form-check-input" type="checkbox" id="8-may-2015" data-year="2015" data-day="2" />8 May 2015
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#FFA600"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="9-may-2015">
+                                            <input class="form-check-input" type="checkbox" id="9-may-2015" data-year="2015" data-day="3" />9 May 2015
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#B4F28A"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="10-may-2015">
+                                            <input class="form-check-input" type="checkbox" id="10-may-2015" data-year="2015" data-day="4" />10 May 2015
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#545AFF"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input parent" type="checkbox" id="2016-storm-chases" data-year="2016" data-day="0" data-toggle="collapse" data-target="#checkboxes-2016" />
+                            <label class="form-check-label" for="2016-storm-chases">
+                                2016 Storm Chases
+                                <i class="fas fa-angle-down" data-target="#checkboxes-2016"></i>
+                            </label>
+                            <div class="sub-checkboxes collapse" id="checkboxes-2016">
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="18-may-2016">
+                                            <input class="form-check-input" type="checkbox" id="18-may-2016" data-year="2016" data-day="1" />18 May 2016
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#F7455D"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="19-may-2016">
+                                            <input class="form-check-input" type="checkbox" id="19-may-2016" data-year="2016" data-day="2" />19 May 2016
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#FFA600"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="20-may-2016">
+                                            <input class="form-check-input" type="checkbox" id="20-may-2016" data-year="2016" data-day="3"  />20 May 2016
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#B4F28A"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="21-may-2016">
+                                            <input class="form-check-input" type="checkbox" id="10-may-2016" data-year="2016" data-day="4"  />21 May 2016
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#545AFF"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input parent" type="checkbox" id="2017-storm-chases" data-year="2017" data-day="0" data-toggle="collapse" data-target="#checkboxes-2017" />
+                            <label class="form-check-label" for="2017-storm-chases">
+                                2017 Storm Chases
+                                <i class="fas fa-angle-down" data-target="#checkboxes-2017"></i>
+                            </label>
+                            <div class="sub-checkboxes collapse" id="checkboxes-2017">
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="18-may-2017">
+                                            <input class="form-check-input" type="checkbox" id="18-may-2017" data-year="2017" data-day="1" />18 May 2017
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#FF0066"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="19-may-2017">
+                                            <input class="form-check-input" type="checkbox" id="19-may-2017" data-year="2017" data-day="2" />19 May 2017
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#FF9933"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="20-may-2017">
+                                            <input class="form-check-input" type="checkbox" id="20-may-2017" data-year="2017" data-day="3"  />20 May 2017
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#00FF00"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="21-may-2017">
+                                            <input class="form-check-input" type="checkbox" id="10-may-2017" data-year="2017" data-day="4"  />21 May 2017
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#0000FF"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input parent" type="checkbox" id="2018-storm-chases" data-year="2018" data-day="0" data-toggle="collapse" data-target="#checkboxes-2018" />
+                            <label class="form-check-label" for="2018-storm-chases">
+                                2018 Storm Chases
+                                <i class="fas fa-angle-down" data-target="#checkboxes-2018"></i>
+                            </label>
+                            <div class="sub-checkboxes collapse" id="checkboxes-2018">
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="18-may-2018">
+                                            <input class="form-check-input" type="checkbox" id="18-may-2018" data-year="2018" data-day="1" />18 May 2018
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#CCFFCC"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="19-may-2018">
+                                            <input class="form-check-input" type="checkbox" id="19-may-2018" data-year="2018" data-day="2" />19 May 2018
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#00FFFF"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="20-may-2018">
+                                            <input class="form-check-input" type="checkbox" id="20-may-2018" data-year="2018" data-day="3"  />20 May 2018
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#CC0099"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="21-may-2018">
+                                            <input class="form-check-input" type="checkbox" id="10-may-2018" data-year="2018" data-day="4"  />21 May 2018
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#FFFFFF"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input parent" type="checkbox" id="2019-storm-chases" data-year="2019" data-day="0" data-toggle="collapse" data-target="#checkboxes-2019" />
+                            <label class="form-check-label" for="2019-storm-chases">
+                                2019 Storm Chases
+                                <i class="fas fa-angle-down" data-target="#checkboxes-2019"></i>
+                            </label>
+                            <div class="sub-checkboxes collapse" id="checkboxes-2019">
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="18-may-2019">
+                                            <input class="form-check-input" type="checkbox" id="18-may-2019" data-year="2019" data-day="1" />18 May 2019
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#000099"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="19-may-2019">
+                                            <input class="form-check-input" type="checkbox" id="19-may-2019" data-year="2019" data-day="2" />19 May 2019
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#FF99FF"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="20-may-2019">
+                                            <input class="form-check-input" type="checkbox" id="20-may-2019" data-year="2019" data-day="3"  />20 May 2019
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#009999"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="21-may-2019">
+                                            <input class="form-check-input" type="checkbox" id="10-may-2019" data-year="2019" data-day="4"  />21 May 2019
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#CC0000"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input parent" type="checkbox" id="2019-monsoon-storm-chases" data-year="2019" data-day="0" data-toggle="collapse" data-target="#checkboxes-monsoon-2019" />
+                            <label class="form-check-label" for="2019-monsoon-storm-chases">
+                                Arizona Monsoon Chase 2019
+                                <i class="fas fa-angle-down" data-target="#checkboxes-monsoon-2019"></i>
+                            </label>
+                            <div class="sub-checkboxes collapse" id="checkboxes-monsoon-2019">
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="10-august-2019">
+                                            <input class="form-check-input" type="checkbox" id="10-august-2019" data-year="2019" data-day="11" />10 August 2019
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#6600CC"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="11-august-2019">
+                                            <input class="form-check-input" type="checkbox" id="11-august-2019" data-year="2019" data-day="12" />11 August 2019
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#9999FF"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="12-august-2019">
+                                            <input class="form-check-input" type="checkbox" id="12-august-2019" data-year="2019" data-day="13" />12 August 2019
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#CC00FF"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <div class="storm-chase-checkbox-label">
+                                        <label class="form-check-label" for="13-august-2019">
+                                            <input class="form-check-input" type="checkbox" id="13-august-2019" data-year="2019" data-day="14" />13 August 2019
+                                        </label>
+                                        <div class="map-line-colour">
+                                            <span class="map-line-colour-marker" style="background-color:#993399"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-9">
-                    <p style="color:white;">Map goes here</p>
+                <div class="col-lg-10">
+                    <div class="map" id="flyout-map-area" data-loaded="false"></div>
                 </div>
             </div>
         </div>
@@ -277,7 +572,11 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/font-awesome.js"></script>
     <script src="_includes/js/core.js"></script>
-    <script src="_includes/js/map.js"></script>
     <script src="_includes/js/contact-me.js"></script>
+    <script src="_includes/js/geojson.js"></script>
+    <script src="_includes/js/map.js"></script>
+    <script src="_includes/js/markers.js"></script>
+    <script src="_includes/js/route-maps.js"></script>
+</body>
 </body>
 </html>

@@ -1,6 +1,7 @@
 .flyout-map {
 	background-color: #413745;
 	position: absolute;
+	z-index: 2;
 }
 
 .flyout-map .close-bar {
