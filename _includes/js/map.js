@@ -8,18 +8,21 @@ $("#storm-chase-map, #storm-chase-map-link").click(function(e) {
 
     lockMap();
 
-	$("#flyout-map").width($(window).width()); // double check the width. Fix for some pages...
-    $("#flyout-map").animate({"left":"0"}, "slow");
+	$("#flyout-map").width(window.outerWidth); // double check the width. Fix for some pages...
+  $("#flyout-map").animate({"left":"0"}, "slow", function() {
+		$("#main").hide();
+  });
 	$("#flyout-map-area").height($(window).height() - mapTopNavigationHeight);
-
+	
 	window.addEventListener('scroll', lockMap);
-
+	
 	loadMap();
 });
 
 $("#flyout-map-close").click(function(e) {
 	e.preventDefault();
-	$("#flyout-map").animate({"left":"-1903"}, "slow"); // TODO: Make this dynamic...
+	$("#main").show();
+	$("#flyout-map").animate({"left":"-1920"}, "slow"); // TODO: Make this dynamic...
 
 	window.removeEventListener('scroll', lockMap);
 });
@@ -60,8 +63,20 @@ $(".control-panel .form-check-input, .control-panel .form-check-label").dblclick
 	e.preventDefault();
 });
 
+//var timer = null;
 function lockMap() {
+	console.log('scrolling...');
   window.scrollTo(0, 0);
+  //window.scrollTo({top:0, left:0, behaviour: 'instant'});
+  
+
+  /*if(timer !== null) {
+  	clearTimeout(timer);
+  }
+
+  timer = setTimeout(function() {
+  	window.scrollTo(0,0);
+  }, 25);*/
 }
 
 function loadMap() {
