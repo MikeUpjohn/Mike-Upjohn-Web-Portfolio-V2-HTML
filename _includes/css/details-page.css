@@ -1,9 +1,24 @@
 .details-page h1 {
-	font-size: 2.0em;
+	font-size: 1.8em;
+}
+
+.details-page h2 {
+	font-family:"Segoe UI Light","Arial", sans-serif;
+	font-size:1.2em;
+	text-align: left;
+	margin-top:0px;
+}
+
+.details-page p {
+	text-align: left;
 }
 
 .details-image {
 	max-width: 100%;
 	height: auto;
 	margin-top: 7.0em;
+}
+
+article.blog-post {
+	margin-top: 2.0em;
 }
