@@ -1,0 +1,57 @@
+.lightbox {
+	display:none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 111;
+}
+
+.image-holder {
+	opacity:1;
+	max-width:62%;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#FFFFFF;
+	padding:10px;
+}
+
+.image-holder img {
+	max-width:100%;
+	display:none;
+}
+
+.caption {
+	max-width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	display:none;
+}
+
+.caption span {
+    text-align: right;
+    max-width: 100%;
+    display: block;
+    color: #F5F5F5;
+    font-family: Agenda, Arial, sans-serif;
+}
+
+.gallery-controls {
+    font-size: 10em;
+	position: fixed;
+    top: 45%;
+}
+
+.gallery-controls a {
+    color: white;
+}
+
+.gallery-controls-left {
+    left: 5%;
+}
+
+.gallery-controls-right {
+    right: 5%;
+}

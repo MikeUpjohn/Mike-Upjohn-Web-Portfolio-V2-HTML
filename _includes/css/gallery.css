@@ -1,0 +1,24 @@
+.gallery-item {
+	margin: 10px;
+}
+
+.gallery-item a {
+	display: block;
+	cursor: pointer;
+}
+
+.details-page .gallery-item {
+	max-width: 35%;
+}
+
+.details-page .gallery-item .gallery-image {
+	max-width: 100%;
+}
+
+.details-page .gallery-item.image-left {
+	float: left;
+}
+
+.details-page .gallery-item.image-right {
+	float: right;
+}
