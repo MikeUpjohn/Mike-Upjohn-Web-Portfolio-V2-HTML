@@ -14,3 +14,10 @@
 	text-align: left;
 }
 
+.blog-detail-cta {
+	padding-top: 20px;
+}
+
+.blog-detail-cta a:hover {
+	text-decoration: none;
+}

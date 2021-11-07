@@ -51,6 +51,5 @@ function loadLightbox() {
 	$.when($("#lightbox .image-holder").add($("#lightbox-gallery-image")).add($("#lightbox .caption")).fadeIn(750)).done(function() {
 		$("#lightbox").fadeIn(750);
 		$("#lightbox").data('display', true);
-	});	
+	});
 }
-
