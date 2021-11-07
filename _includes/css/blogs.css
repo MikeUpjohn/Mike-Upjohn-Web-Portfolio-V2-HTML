@@ -13,11 +13,3 @@
 .left-item h4, .left-item h5, .left-item p {
 	text-align: left;
 }
-
-.blog-detail-cta {
-	padding-top: 20px;
-}
-
-.blog-detail-cta a:hover {
-	text-decoration: none;
-}

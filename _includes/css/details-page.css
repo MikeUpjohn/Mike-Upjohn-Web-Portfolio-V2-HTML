@@ -22,3 +22,11 @@
 article.blog-post {
 	margin-top: 2.0em;
 }
+
+.detail-cta {
+	padding-top: 20px;
+}
+
+.detail-cta a:hover {
+	text-decoration: none;
+}
