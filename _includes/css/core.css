@@ -148,7 +148,6 @@ body {
 }
 
 /** Contact Form **/
-
 .form-component {
 	margin-bottom: 1.0em;
 }
@@ -165,6 +164,10 @@ body {
 
 .form-component textarea.form-control {
 	height: 140px;
+}
+
+.form-component select {
+	appearance: menulist;
 }
 
 .validation-asterisk, .validation-error {

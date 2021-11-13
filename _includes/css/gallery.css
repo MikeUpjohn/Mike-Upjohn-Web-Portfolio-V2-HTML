@@ -22,3 +22,8 @@
 .details-page .gallery-item.image-right {
 	float: right;
 }
+
+/** Gallery Search Form **/
+.gallery-search-form {
+	margin-top: 45px;
+}
