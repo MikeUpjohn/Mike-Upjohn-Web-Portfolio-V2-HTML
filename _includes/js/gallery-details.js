@@ -28,6 +28,36 @@ $(".lightbox").click(function(e) {
 	}
 });
 
+$("#previous-gallery-item").click(function(e) {
+	e.stopPropagation();
+	e.preventDefault();
+
+	if(itemNumber === 1) {
+		itemNumber = totalItems;
+	}
+	else {
+		itemNumber--;
+	}
+
+	var lastItem = $(".gallery-item[data-item='" + itemNumber + "']");
+	changeGalleryImage(lastItem.data("imageurl"), lastItem.data("caption"));
+});
+
+$("#next-gallery-item").click(function(e) {
+	e.stopPropagation();
+	e.preventDefault();
+
+	if(itemNumber === totalItems) {
+		itemNumber = 1;
+	}
+	else {
+		itemNumber++;	
+	}
+
+	var nextItem = $(".gallery-item[data-item='" + itemNumber + "']");
+	changeGalleryImage(nextItem.data("imageurl"), nextItem.data("caption"));
+});
+
 function fadeLightboxIn(imageUrl, caption) {
 	changeGalleryImage(imageUrl, caption);
 	loadLightbox();
