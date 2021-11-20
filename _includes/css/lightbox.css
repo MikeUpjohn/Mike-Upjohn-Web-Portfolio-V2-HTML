@@ -11,16 +11,24 @@
 
 .image-holder {
 	opacity:1;
-	max-width:62%;
+	max-width:fit-content;
 	margin-left:auto;
 	margin-right:auto;
 	background-color:#FFFFFF;
 	padding:10px;
 }
 
-.image-holder img {
+/*.image-holder img {
 	max-width:100%;
 	display:none;
+}*/
+
+.image-holder img {
+    max-width: 100%;
+    display: none;
+    max-height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .caption {

@@ -13,9 +13,17 @@
 	text-decoration: none;
 }
 
-.gallery-item img {
+/*.gallery-item img {
 	max-width:100%;
 	height:auto;
+}*/
+
+.gallery-item img {
+	width:auto;
+	max-height: 350px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .gallery-title {
