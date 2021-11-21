@@ -1,0 +1,17 @@
+name: Mike Upjohn HTML Build
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: FTP Deploy Files to Server
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ${{secrets.SERVER_IP}}
+        username: ${{secrets.FTP_USERNAME}}
+        password: ${{secrets.FTP_PASSWORD}}
+        local-dir: ${{secrets.LOCAL_DIR}}
+        server-dir: ${{secrets.SERVER_DIR}}
