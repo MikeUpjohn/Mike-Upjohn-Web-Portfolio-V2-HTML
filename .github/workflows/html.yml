@@ -9,6 +9,7 @@ jobs:
     steps:
     - name: Check Folder is right
       run: |
+        cd ./
         dir
     - name: FTP Deploy Files to Server
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
