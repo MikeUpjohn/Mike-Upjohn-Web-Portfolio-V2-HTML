@@ -13,3 +13,19 @@
 .left-item h4, .left-item h5, .left-item p {
 	text-align: left;
 }
+
+.details-page .gallery-item {
+	max-width: 35%;
+}
+
+.details-page .gallery-item .gallery-image {
+	max-width: 100%;
+}
+
+.details-page .gallery-item.image-left {
+	float: left;
+}
+
+.details-page .gallery-item.image-right {
+	float: right;
+}

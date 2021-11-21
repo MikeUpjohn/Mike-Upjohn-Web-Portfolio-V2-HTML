@@ -39,11 +39,6 @@
 }
 
 .caption span {
-    text-align: right;
-    max-width: 100%;
-    display: block;
-    color: #F5F5F5;
-    font-family: Agenda, Arial, sans-serif;
 }
 
 .gallery-controls {
@@ -62,4 +57,16 @@
 
 .gallery-controls-right {
     right: 5%;
+}
+
+#gallery-caption {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+    text-align: right;
+    max-width: 100%;
+    display: block;
+    color: #F5F5F5;
+    font-family: Agenda, Arial, sans-serif;
 }

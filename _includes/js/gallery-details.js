@@ -80,6 +80,7 @@ function changeGalleryImage(imageUrl, caption) {
 function loadLightbox() {
 	$.when($("#lightbox .image-holder").add($("#lightbox-gallery-image")).add($("#lightbox .caption")).fadeIn(750)).done(function() {
 		$("#lightbox").fadeIn(750);
+		$("#gallery-caption").css("width", $("#image-holder").outerWidth());
 		$("#lightbox").data('display', true);
 	});
 }
