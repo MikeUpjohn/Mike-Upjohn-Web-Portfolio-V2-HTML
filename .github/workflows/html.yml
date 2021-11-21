@@ -7,6 +7,9 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+    - name: Check Folder is right
+      run: |
+        dir
     - name: FTP Deploy Files to Server
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
