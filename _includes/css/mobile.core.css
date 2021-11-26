@@ -1,0 +1,56 @@
+@media only screen and (max-width: 600px) {
+	/** Generic Stuff **/
+	.banner-container {
+		position: relative;
+		top: 0px;
+		right: 0px;
+	}
+
+	.banner-content {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 7.0em;
+	}
+
+	.banner-content h1 {
+		font-size: 3.0em;
+		text-align: center;
+	}
+
+	.banner-content h2 {
+		font-size: 1.6em;
+		text-align: center;
+	}
+
+	#main-menu {
+		background-color: transparent;
+	}
+
+	.navbar-toggler {
+		background-color: #FFFFFF;
+		margin-left: 10px;
+		margin-top: 10px;
+		border: 2px solid #635087;
+		padding: 8px 8px 6px 8px;
+	}
+
+	.navbar-toggler-icon .icon-bar.first-icon-bar {
+		margin-top: 2px;
+	}
+
+	.navbar-toggler-icon .icon-bar {
+		/*background-color: #888;*/
+		border: 2px solid #635087;
+		display: block;
+		/*width: 22px;*/
+		height: 2px;
+		border-radius: 1px;
+		margin-top: 5px;
+	}
+	
+	#mobile-menu, #mobile-menu h3 {
+		z-index: -1;
+	}
+}

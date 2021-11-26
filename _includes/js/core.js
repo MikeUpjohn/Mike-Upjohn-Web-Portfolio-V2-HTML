@@ -15,6 +15,21 @@ $(window).resize(function() {
 	}
 });
 
+$("#mobile-navigation-toggle").click(function() {
+	var expanded = $(this).attr('aria-expanded');
+
+	if(expanded == "true") {
+		$(this).attr('aria-expanded','false');
+		$("#main").animate({marginLeft:'0px'},'slow');
+	}
+	else {
+		$(this).attr('aria-expanded','true');
+		$("#main").animate({marginLeft:'260px'},'slow');
+	}
+
+	$(".navbar-toggle").blur();
+});
+
 function GetBannerHeight() {
 	height = $(window).height();
 	if(height < 450) {

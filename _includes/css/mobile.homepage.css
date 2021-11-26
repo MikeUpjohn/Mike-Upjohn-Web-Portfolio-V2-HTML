@@ -1,0 +1,7 @@
+@media only screen and (max-width: 600px) {
+	/** Homepage **/
+	.homepage .banner-image {
+		background: url(../../_includes/img/banner-image-02.jpg) no-repeat -650px center local;
+		background-size: cover;
+	}
+}
