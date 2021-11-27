@@ -36,6 +36,10 @@
 		padding: 8px 8px 6px 8px;
 	}
 
+	.navbar-toggler:focus{
+		box-shadow: none;
+	}
+
 	.navbar-toggler-icon .icon-bar.first-icon-bar {
 		margin-top: 2px;
 	}
@@ -49,8 +53,29 @@
 		border-radius: 1px;
 		margin-top: 5px;
 	}
+
+	#mobile-menu {
+		position: absolute;
+	}
 	
 	#mobile-menu, #mobile-menu h3 {
 		z-index: -1;
+	}
+
+	.content-area {
+		max-width: 90%;
+	}
+
+	.content-area p {
+		font-size: 1.0em;
+	}
+
+	.content-area h3:before, .content-area h3:after {
+		width: 100%;
+		top: 12px;
+	}
+
+	.content-area h3 {
+		font-size: 1.1em;
 	}
 }
