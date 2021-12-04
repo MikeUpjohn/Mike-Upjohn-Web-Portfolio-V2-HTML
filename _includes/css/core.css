@@ -272,3 +272,7 @@ footer .right-footer {
 	float: right;
 	text-align: right;
 }
+
+#mobile-menu {
+	display: none;
+}

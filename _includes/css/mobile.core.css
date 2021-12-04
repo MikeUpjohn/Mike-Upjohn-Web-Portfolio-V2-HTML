@@ -1,27 +1,7 @@
-@media only screen and (max-width: 600px) {
-	/** Generic Stuff **/
-	.banner-container {
-		position: relative;
-		top: 0px;
-		right: 0px;
-	}
-
-	.banner-content {
+@media only screen and (max-width: 991px) {
+	#mobile-menu {
 		display: block;
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 7.0em;
-	}
-
-	.banner-content h1 {
-		font-size: 3.0em;
-		text-align: center;
-	}
-
-	.banner-content h2 {
-		font-size: 1.6em;
-		text-align: center;
+		width: 265px;
 	}
 
 	#main-menu {
@@ -54,6 +34,10 @@
 		margin-top: 5px;
 	}
 
+	.content-area {
+		max-width: 90%;
+	}
+
 	#mobile-menu {
 		position: absolute;
 	}
@@ -61,10 +45,35 @@
 	#mobile-menu, #mobile-menu h3 {
 		z-index: -1;
 	}
+}
 
-	.content-area {
-		max-width: 90%;
+@media only screen and (max-width: 600px) {
+	/** Generic Stuff **/
+	.banner-container {
+		position: relative;
+		top: 0px;
+		right: 0px;
 	}
+
+	.banner-content {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 7.0em;
+	}
+
+	.banner-content h1 {
+		font-size: 3.0em;
+		text-align: center;
+	}
+
+	.banner-content h2 {
+		font-size: 1.6em;
+		text-align: center;
+	}
+
+	
 
 	.content-area p {
 		font-size: 1.0em;

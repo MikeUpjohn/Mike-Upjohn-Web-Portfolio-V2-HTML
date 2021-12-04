@@ -24,7 +24,7 @@ $("#mobile-navigation-toggle").click(function() {
 	}
 	else {
 		$(this).attr('aria-expanded','true');
-		$("#main").animate({marginLeft:'260px'},'slow');
+		$("#main").animate({marginLeft:'300px'},'slow');
 	}
 
 	$(".navbar-toggle").blur();
