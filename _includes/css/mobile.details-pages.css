@@ -1,0 +1,21 @@
+@media only screen and (max-width: 600px) {
+	.details-image {
+		margin-top: 5.0em;
+	}
+
+	article.blog-post {
+		margin-top: 1.0em;
+	}
+
+	.details-page h2 {
+		font-size: 1.1em;
+	}
+
+	.details-page .gallery-item {
+		max-width: 100%;
+	}
+
+	.details-page .content-area {
+		margin-bottom: 0em;
+	}
+}
