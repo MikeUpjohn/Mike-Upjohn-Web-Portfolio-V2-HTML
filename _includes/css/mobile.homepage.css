@@ -21,6 +21,11 @@
 		text-align: center;
 	}
 
+	.latest-project .item-no-padding, .latest-blog .item-no-padding {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
 	.content-area .latest-project h4,
 	.content-area .latest-project h5,
 	.content-area .latest-project p,
@@ -33,5 +38,9 @@
 	.content-area .latest-project h4,
 	.content-area .latest-blog h4 {
 		margin-top: 1.0em;
+	}
+
+	.homepage .validation-error {
+		float: none;
 	}
 }

@@ -1,7 +1,12 @@
 @media only screen and (max-width: 991px) {
+	.row>* {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
 	#mobile-menu {
 		display: block;
-		width: 265px;
+		width: 300px;
 	}
 
 	#main-menu {
@@ -45,6 +50,10 @@
 	#mobile-menu, #mobile-menu h3 {
 		z-index: -1;
 	}
+
+	#flyout-map {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -86,5 +95,11 @@
 
 	.content-area h3 {
 		font-size: 1.1em;
+	}
+
+	footer .left-footer, footer .right-footer {
+		display: block;
+		width: 100%;
+		text-align: center;
 	}
 }
