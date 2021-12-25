@@ -10,11 +10,15 @@ $(document).ready(function() {
 $(".gallery-item").click(function(e) {
 	e.preventDefault();
 
-	imageUrl = $(this).data('imageurl');
-	caption = $(this).data('caption');
-	itemNumber = $(this).data('item');
+	var screenWidth = window.width;
 
-	fadeLightboxIn(imageUrl, caption);
+	if(screenWidth >= 768) {
+		imageUrl = $(this).data('imageurl');
+		caption = $(this).data('caption');
+		itemNumber = $(this).data('item');
+
+		fadeLightboxIn(imageUrl, caption);
+	}
 });
 
 $("#gallery-image-close").click(function(e) {
