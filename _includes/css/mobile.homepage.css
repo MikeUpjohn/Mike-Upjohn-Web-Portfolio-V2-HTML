@@ -44,9 +44,3 @@
 		float: none;
 	}
 }
-
-@media only screen and (min-width:  992px) {
-	.homepage .mobile-image {
-		display: none;
-	}
-}
