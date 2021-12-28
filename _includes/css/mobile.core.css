@@ -6,7 +6,7 @@
 
 	#mobile-menu {
 		display: block;
-		width: 300px;
+		width: 280px;
 	}
 
 	#main-menu {
@@ -37,6 +37,11 @@
 		height: 2px;
 		border-radius: 1px;
 		margin-top: 5px;
+	}
+
+	.banner-content {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 	.content-area {
@@ -82,8 +87,6 @@
 		text-align: center;
 	}
 
-	
-
 	.content-area p {
 		font-size: 1.0em;
 	}
@@ -97,6 +100,18 @@
 		font-size: 1.1em;
 	}
 
+	.pagination ul li.desktop-pagination {
+		display: none;
+	}
+
+	.mobile-image {
+		display: block;
+	}
+
+	.desktop-image {
+		display: none;
+	}
+
 	footer .left-footer, footer .right-footer {
 		display: block;
 		width: 100%;
@@ -104,8 +119,34 @@
 	}
 }
 
-@media only screen and (min-width:  992px) {
+@media only screen and (min-width: 992px) {
 	.mobile-image {
 		display: none;
+	}
+
+	.desktop-image {
+		display: block;
+	}
+
+	.projects .item img, .blogs .item img {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 300px) {
+	/** Styling specific to Galaxy Fold */
+	.pagination ul li {
+	    display: inline-block;
+	    width: 40px;
+	    height: 40px;
+	    background-image: url(../../_includes/img/pagination-icon.jpg);
+	}
+
+	.pagination ul li a {
+	    color: #FFFFFF;
+	    display: block;
+	    padding-top: 7px;
+	    text-decoration: none;
+	    font-size: 0.8em;
 	}
 }
