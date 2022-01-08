@@ -1,0 +1,17 @@
+@media only screen and (max-width: 991px) {
+	.item.first-item {
+		margin-top: 0em;
+	}
+
+	.item {
+		margin-top: 2em;
+	}
+
+	.project-image {
+		margin-bottom: 1.0em;
+	}
+
+	.item h4, .item h5, .item p {
+		text-align: center;
+	}
+}

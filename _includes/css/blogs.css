@@ -1,3 +1,11 @@
+.item {
+	margin-top: 2.0em;
+}
+
+.item.first-item {
+	margin-top: 0em;
+}
+
 .item img {
 	width: 100%;
 }
