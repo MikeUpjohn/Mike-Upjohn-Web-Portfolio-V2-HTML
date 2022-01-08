@@ -243,6 +243,7 @@ footer li a:hover {
 }
 
 footer .footer-links {
+	padding-left: 0;
 	list-style-type: none;
 }
 
