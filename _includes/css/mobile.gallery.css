@@ -1,0 +1,22 @@
+@media only screen and (max-width: 991px) {
+	.image-holder {
+		max-width: 80%;
+		margin-top: 14.0em; /*temporary*/
+	}
+
+	.gallery-controls {
+		font-size: 3em;
+	}
+
+	.gallery-controls-left {
+		left: 3%;
+	}
+
+	.gallery-controls-right {
+		right: 3%;
+	}
+
+	.gallery-details .gallery-item img {
+		max-width: 100%;
+	}
+}

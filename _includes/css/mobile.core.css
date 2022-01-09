@@ -158,3 +158,29 @@
 		content: '';
 	}
 }
+
+@media only screen and (min-width: 601px) and (max-width: 991px) {
+	.banner-container {
+		position: relative;
+		top: 0px;
+		right: 0px;
+	}
+
+	.banner-content {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 7.0em;
+	}
+
+	.banner-content h1 {
+		font-size: 4.0em;
+		text-align: center;
+	}
+
+	.banner-content h2 {
+		font-size: 1.6em;
+		text-align: center;
+	}
+}
