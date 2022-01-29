@@ -2,6 +2,7 @@
 	.image-holder {
 		max-width: 80%;
 		margin-top: 14.0em; /*temporary*/
+		max-height: 450px;
 	}
 
 	.gallery-controls {
@@ -18,5 +19,12 @@
 
 	.gallery-details .gallery-item img {
 		max-width: 100%;
+	}
+
+	#lightbox-gallery-image {
+		max-height: 49vh;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }

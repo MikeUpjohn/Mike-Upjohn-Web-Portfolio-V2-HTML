@@ -16,12 +16,8 @@
 	margin-right:auto;
 	background-color:#FFFFFF;
 	padding:10px;
+    margin-top: 1.0em;
 }
-
-/*.image-holder img {
-	max-width:100%;
-	display:none;
-}*/
 
 .image-holder img {
     max-width: 100%;
@@ -44,7 +40,7 @@
 .gallery-controls {
     font-size: 10em;
 	position: fixed;
-    top: 45%;
+    top: 40%;
 }
 
 .gallery-controls a {
