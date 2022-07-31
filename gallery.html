@@ -11,10 +11,11 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="_includes/css/core.css" rel="stylesheet">
+    <link href="_includes/css/gallery.css" rel="stylesheet">
     <link href="_includes/css/navigation.css" rel="stylesheet">
     <link href="_includes/css/horizontal-titles.css" rel="stylesheet">
-    <link href="_includes/css/mobile.css" rel="stylesheet">
-    <link href="_includes/css/gallery.css" rel="stylesheet">
+    <link href="_includes/css/mobile.core.css" rel="stylesheet">
+    <link href="_includes/css/mobile.navigation.css" rel="stylesheet">
     <link href="_includes/css/flyout-map.css" rel="stylesheet">
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
 
@@ -34,8 +35,12 @@
     <div id="main">
         <nav class="navbar navbar-expand-lg" id="main-menu">
           <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button id="mobile-navigation-toggle" class="navbar-toggler" type="button"> 
+              <span class="navbar-toggler-icon">
+                <span class="icon-bar first-icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
@@ -133,7 +138,7 @@
                             <div class="row row-no-padding">
                                 <div class="col-xs-12 col-md-6 col-lg-4 row-no-padding">
                                     <div class="gallery-item">
-                                        <a href="gallery-details.html">
+                                        <a href="gallery-detail.html">
                                             <img class="gallery-image" src="_includes/img/gallery/tile-1.jpg" alt="An image" />
                                             <div class="gallery-title">
                                                 <div class="gallery-title-text">
@@ -146,7 +151,7 @@
                                 </div>
                                 <div class="col-xs-12 col-md-6 col-lg-4 row-no-padding">
                                     <div class="gallery-item">
-                                        <a href="gallery-details.html">
+                                        <a href="gallery-detail.html">
                                             <img class="gallery-image" src="_includes/img/gallery/tile-2.jpg" alt="An image" />
                                             <div class="gallery-title">
                                                 <div class="gallery-title-text">
@@ -159,7 +164,7 @@
                                 </div>
                                 <div class="col-xs-12 col-md-6 col-lg-4 row-no-padding">
                                     <div class="gallery-item">
-                                        <a href="gallery-details.html">
+                                        <a href="gallery-detail.html">
                                             <img class="gallery-image" src="_includes/img/gallery/tile-3.jpg" alt="An image" />
                                             <div class="gallery-title">
                                                 <div class="gallery-title-text">
@@ -172,7 +177,7 @@
                                 </div>
                                 <div class="col-xs-12 col-md-6 col-lg-4 row-no-padding">
                                     <div class="gallery-item">
-                                        <a href="gallery-details.html">
+                                        <a href="gallery-detail.html">
                                             <img class="gallery-image" src="_includes/img/gallery/tile-4.jpg" alt="An image" />
                                             <div class="gallery-title">
                                                 <div class="gallery-title-text">
@@ -185,7 +190,7 @@
                                 </div>
                                 <div class="col-xs-12 col-md-6 col-lg-4 row-no-padding">
                                     <div class="gallery-item">
-                                        <a href="gallery-details.html">
+                                        <a href="gallery-detail.html">
                                             <img class="gallery-image" src="_includes/img/gallery/tile-5.jpg" alt="An image" />
                                             <div class="gallery-title">
                                                 <div class="gallery-title-text">
@@ -198,7 +203,7 @@
                                 </div>
                                 <div class="col-xs-12 col-md-6 col-lg-4 row-no-padding">
                                     <div class="gallery-item">
-                                        <a href="gallery-details.html">
+                                        <a href="gallery-detail.html">
                                             <img class="gallery-image" src="_includes/img/gallery/tile-6.jpg" alt="An image" />
                                             <div class="gallery-title">
                                                 <div class="gallery-title-text">
@@ -211,7 +216,7 @@
                                 </div>
                                 <div class="col-xs-12 col-md-6 col-lg-4 row-no-padding">
                                     <div class="gallery-item">
-                                        <a href="gallery-details.html">
+                                        <a href="gallery-detail.html">
                                             <img class="gallery-image" src="_includes/img/gallery/tile-7.jpg" alt="An image" />
                                             <div class="gallery-title">
                                                 <div class="gallery-title-text">
@@ -224,7 +229,7 @@
                                 </div>
                                 <div class="col-xs-12 col-md-6 col-lg-4 row-no-padding">
                                     <div class="gallery-item">
-                                        <a href="gallery-details.html">
+                                        <a href="gallery-detail.html">
                                             <img class="gallery-image" src="_includes/img/gallery/tile-8.jpg" alt="An image" />
                                             <div class="gallery-title">
                                                 <div class="gallery-title-text">
@@ -237,7 +242,7 @@
                                 </div>
                                 <div class="col-xs-12 col-md-6 col-lg-4 row-no-padding">
                                     <div class="gallery-item">
-                                        <a href="gallery-details.html">
+                                        <a href="gallery-detail.html">
                                             <img class="gallery-image" src="_includes/img/gallery/tile-9.jpg" alt="An image" />
                                             <div class="gallery-title">
                                                 <div class="gallery-title-text">
@@ -250,7 +255,7 @@
                                 </div>
                                 <div class="col-xs-12 col-md-6 col-lg-4 row-no-padding">
                                     <div class="gallery-item">
-                                        <a href="gallery-details.html">
+                                        <a href="gallery-detail.html">
                                             <img class="gallery-image" src="_includes/img/gallery/tile-10.jpg" alt="An image" />
                                             <div class="gallery-title">
                                                 <div class="gallery-title-text">
@@ -263,7 +268,7 @@
                                 </div>
                                 <div class="col-xs-12 col-md-6 col-lg-4 row-no-padding">
                                     <div class="gallery-item">
-                                        <a href="gallery-details.html">
+                                        <a href="gallery-detail.html">
                                             <img class="gallery-image" src="_includes/img/gallery/tile-11.jpg" alt="An image" />
                                             <div class="gallery-title">
                                                 <div class="gallery-title-text">
@@ -276,7 +281,7 @@
                                 </div>
                                 <div class="col-xs-12 col-md-6 col-lg-4 row-no-padding">
                                     <div class="gallery-item">
-                                        <a href="gallery-details.html">
+                                        <a href="gallery-detail.html">
                                             <img class="gallery-image" src="_includes/img/gallery/tile-12.jpg" alt="An image" />
                                             <div class="gallery-title">
                                                 <div class="gallery-title-text">
@@ -622,6 +627,38 @@
                     <div class="map" id="flyout-map-area" data-loaded="false"></div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div id="mobile-menu">
+        <div class="menu-header">
+            <h3>Confessions of a Storm Geek</h3>
+        </div>
+        <div class="mobile-menu-items">
+            <ul>
+                <li class="home">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="blogs">
+                    <a href="">Storm Chase Blogs</a>
+                    <ul>
+                        <li><a href="blog.html">Arizona Monsoon 2019</a></li>
+                        <li><a href="blog.html">Storm Chase 2019</a></li>
+                        <li><a href="blog.html">Storm Chase 2018</a></li>
+                        <li><a href="blog.html">Storm Chase 2017</a></li>
+                        <li><a href="blog.html">Storm Chase 2016</a></li>
+                        <li><a href="blog.html">Storm Chase 2015</a></li>
+                    </ul>
+                </li>
+                <li class="projects">
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li class="gallery">
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li class="contact-me">
+                    <a href="contact-me.html">Contact Me</a>
+                </li>
+            </ul>
         </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -243,6 +243,7 @@ footer li a:hover {
 }
 
 footer .footer-links {
+	padding-left: 0;
 	list-style-type: none;
 }
 
@@ -267,4 +268,8 @@ footer .right-footer {
 	width: 40%;
 	float: right;
 	text-align: right;
+}
+
+#mobile-menu {
+	display: none;
 }

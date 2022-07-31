@@ -9,6 +9,7 @@ function initMap() {
 		container: 'contact-map',
 		style: 'mapbox://styles/mapbox/dark-v10',
 		center: [-2.249217, 53.260956],
-		zoom: 9
+		zoom: 9,
+		interactive: false
 	});
 }
