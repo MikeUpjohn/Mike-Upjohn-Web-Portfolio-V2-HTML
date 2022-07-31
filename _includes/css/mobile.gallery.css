@@ -1,8 +1,8 @@
-@media only screen and (max-width: 991px) {
+/*@media only screen and (max-width: 991px) {
 	.image-holder {
 		max-width: 80%;
-		margin-top: 14.0em; /*temporary*/
-		max-height: 450px;
+		margin-top: 14.0em;*/ /*temporary*/
+		/*max-height: 450px;
 	}
 
 	.gallery-controls {
@@ -22,9 +22,36 @@
 	}
 
 	#lightbox-gallery-image {
-		max-height: 49vh;
+		max-height: 37vh;
+		max-width: 100%;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+	}
+}*/
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+	.image-holder {
+		margin-top: 9em;
+		max-width: 80%;
+		max-height: 550px;
+	}
+
+	.gallery-controls {
+		font-size: 3em;
+		top: 50%;
+	}
+
+	.gallery-controls-left {
+		left: 3%;
+	}
+
+	.gallery-controls-right {
+		right: 3%;
+	}
+
+	#lightbox-gallery-image {
+		display: block;
+		max-height: 530px;
 	}
 }
