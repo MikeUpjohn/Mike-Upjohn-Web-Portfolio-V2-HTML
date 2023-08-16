@@ -64,5 +64,6 @@ $(document).ready(function() {
 		$(".flyout-map").width(width);
 		$(".flyout-map").height(height);
 		$(".flyout-map").css( {left: -width} );
+		$('#overlay').fadeOut(1500);
 	}
 });
