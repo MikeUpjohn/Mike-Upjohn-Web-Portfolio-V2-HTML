@@ -50,7 +50,8 @@
 }
 
 .sub-checkboxes .form-check-label {
-	width: 190px;
+	width: 78%;
+	float:left;
 }
 
 .sub-checkboxes .form-check {
@@ -73,12 +74,14 @@
 
 .sub-checkboxes .storm-chase-checkbox-label {
 	display: inline-block;
+	width: 81%;
 }
 
 .map-line-colour {
 	width: 75px;
-	display: inline-block;
 	height: 15px;
+	float: right;
+	width: 5%;
 }
 
 .map-line-colour-marker {
