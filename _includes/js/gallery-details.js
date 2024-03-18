@@ -16,7 +16,7 @@ $(".gallery-item").click(function(e) {
 		imageUrl = $(this).data('imageurl');
 		caption = $(this).data('caption');
 		itemNumber = $(this).data('item');
-
+		
 		fadeLightboxIn(imageUrl, caption);
 	}
 });
@@ -79,8 +79,12 @@ function fadeLightboxOut() {
 }
 
 function changeGalleryImage(imageUrl, caption) {
+	$('#gallery-image-container img').attr('src', imageUrl);
+
 	$("#lightbox-gallery-image").attr('src', imageUrl);
 	$("#gallery-caption").text(caption);
+	$('#image-holder').css("width", $('#gallery-image-container img').width());
+	$('#image-holder').css("height", $('#gallery-image-container img').height());
 }
 
 function loadLightbox() {
