@@ -33,3 +33,8 @@
 .details-page .gallery-item.image-right {
 	float: right;
 }
+
+.content-area .no-results {
+	font-size:1.5em;
+	font-weight:bold;
+}
