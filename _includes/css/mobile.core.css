@@ -50,6 +50,7 @@
 
 	#mobile-menu {
 		position: absolute;
+		top: 0px;
 	}
 	
 	#mobile-menu, #mobile-menu h3 {
