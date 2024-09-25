@@ -1,3 +1,118 @@
+@media only screen and (max-width: 300px) {
+	/** Styling specific to Galaxy Fold */
+	.pagination ul li {
+	    display: inline-block;
+	    width: 40px;
+	    height: 40px;
+	    background-image: url(../../_includes/img/pagination-icon.jpg);
+	}
+
+	.pagination ul li a {
+	    color: #FFFFFF;
+	    display: block;
+	    padding-top: 7px;
+	    text-decoration: none;
+	    font-size: 0.8em;
+	}
+
+	footer .footer-links li {
+		display: block;
+	}
+
+	footer .footer-links li::after {
+		content: '';
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	/** Generic Stuff **/
+	.banner-container {
+		position: relative;
+		top: 0px;
+		right: 0px;
+	}
+
+	.banner-content {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 7.0em;
+	}
+
+	.banner-content h1 {
+		font-size: 3.0em;
+		text-align: center;
+	}
+
+	.banner-content h2 {
+		font-size: 1.6em;
+		text-align: center;
+	}
+
+	.content-area p {
+		font-size: 1.0em;
+	}
+
+	.content-area h3:before, .content-area h3:after {
+		width: 100%;
+		top: 12px;
+	}
+
+	.content-area h3 {
+		font-size: 1.1em;
+	}
+
+	.pagination ul li.desktop-pagination {
+		display: none;
+	}
+
+	footer .left-footer, footer .right-footer {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 991px) {
+	.banner-container {
+		position: relative;
+		top: 0px;
+		right: 0px;
+	}
+
+	.banner-content {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 7.0em;
+	}
+
+	.banner-content h1 {
+		font-size: 4.0em;
+		text-align: center;
+	}
+
+	.banner-content h2 {
+		font-size: 1.6em;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+    .content-area {
+        .desktop-image {
+            display: none;
+        }
+
+        .mobile-image {
+            display: block;
+        }
+    }
+}
+
 @media only screen and (max-width: 991px) {
 	.row>* {
 		/*padding-right: 0px;
@@ -48,6 +163,14 @@
 		max-width: 90%;
 	}
 
+	.mobile-image {
+		display: block;
+	}
+
+	.desktop-image {
+		display: none;
+	}
+
 	#mobile-menu {
 		position: absolute;
 		top: 0px;
@@ -62,64 +185,6 @@
 	}
 }
 
-@media only screen and (max-width: 600px) {
-	/** Generic Stuff **/
-	.banner-container {
-		position: relative;
-		top: 0px;
-		right: 0px;
-	}
-
-	.banner-content {
-		display: block;
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 7.0em;
-	}
-
-	.banner-content h1 {
-		font-size: 3.0em;
-		text-align: center;
-	}
-
-	.banner-content h2 {
-		font-size: 1.6em;
-		text-align: center;
-	}
-
-	.content-area p {
-		font-size: 1.0em;
-	}
-
-	.content-area h3:before, .content-area h3:after {
-		width: 100%;
-		top: 12px;
-	}
-
-	.content-area h3 {
-		font-size: 1.1em;
-	}
-
-	.pagination ul li.desktop-pagination {
-		display: none;
-	}
-
-	.mobile-image {
-		display: block;
-	}
-
-	.desktop-image {
-		display: none;
-	}
-
-	footer .left-footer, footer .right-footer {
-		display: block;
-		width: 100%;
-		text-align: center;
-	}
-}
-
 @media only screen and (min-width: 992px) {
 	.mobile-image {
 		display: none;
@@ -131,57 +196,5 @@
 
 	.projects .item img, .blogs .item img {
 		width: 100%;
-	}
-}
-
-@media only screen and (max-width: 300px) {
-	/** Styling specific to Galaxy Fold */
-	.pagination ul li {
-	    display: inline-block;
-	    width: 40px;
-	    height: 40px;
-	    background-image: url(../../_includes/img/pagination-icon.jpg);
-	}
-
-	.pagination ul li a {
-	    color: #FFFFFF;
-	    display: block;
-	    padding-top: 7px;
-	    text-decoration: none;
-	    font-size: 0.8em;
-	}
-
-	footer .footer-links li {
-		display: block;
-	}
-
-	footer .footer-links li::after {
-		content: '';
-	}
-}
-
-@media only screen and (min-width: 601px) and (max-width: 991px) {
-	.banner-container {
-		position: relative;
-		top: 0px;
-		right: 0px;
-	}
-
-	.banner-content {
-		display: block;
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 7.0em;
-	}
-
-	.banner-content h1 {
-		font-size: 4.0em;
-		text-align: center;
-	}
-
-	.banner-content h2 {
-		font-size: 1.6em;
-		text-align: center;
 	}
 }
