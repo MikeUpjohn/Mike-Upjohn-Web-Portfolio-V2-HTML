@@ -11,14 +11,13 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="_includes/css/core.css" rel="stylesheet">
-    <link href="_includes/css/blogs.css" rel="stylesheet">
-    <link href="_includes/css/details-page.css" rel="stylesheet">
     <link href="_includes/css/gallery.css" rel="stylesheet">
-    <link href="_includes/css/lightbox.css" rel="stylesheet">
     <link href="_includes/css/navigation.css" rel="stylesheet">
     <link href="_includes/css/horizontal-titles.css" rel="stylesheet">
+    <link href="_includes/css/lightbox.css" rel="stylesheet">
     <link href="_includes/css/mobile.core.css" rel="stylesheet">
     <link href="_includes/css/mobile.navigation.css" rel="stylesheet">
+    <link href="_includes/css/mobile.gallery.css" rel="stylesheet">
     <link href="_includes/css/flyout-map.css" rel="stylesheet">
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
 
@@ -34,7 +33,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 </head>
-<body class="details-page">
+<body class="gallery-details">
     <div id="main">
         <nav class="navbar navbar-expand-lg" id="main-menu">
           <div class="container-fluid">
@@ -85,38 +84,121 @@
           </div>
         </nav>
         <div class="container-fluid">
-             <div class="row row-no-padding white-area">
-                <div class="col-xs-12">
-                    <div class="content-area">
-                        <img src="_includes/img/blog-image.jpg" alt="Blog Image" class="details-image">
+            <div class="row row-no-padding">
+                <div class="col-xs-12 row-no-padding">
+                    <div class="banner-container">
+                        <div class="banner-content">
+                            <h1>Monument Valley, UT</h1>
+                            <h2>17 August, 2019</h2>
+                        </div>
                     </div>
+                    <div class="banner-image"></div>
                 </div>
             </div>
-            <div class="row row-no-padding purple-area">
+            <div class="row row-no-padding white-area">
                 <div class="col-xs-12">
                     <div class="content-area">
-                        <article class="blog-post">
-                            <h1>Centralised Tornado Data Repository</h1>
-                            <h2>December 2015</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla lorem at lacinia maximus. Morbi volutpat sagittis diam sit amet tempor. In et faucibus massa. Morbi id congue enim. Aliquam ac efficitur massa, eget dapibus mi. Proin vel tellus libero. Sed suscipit bibendum commodo. Integer iaculis nunc vitae lobortis egestas. Fusce venenatis mauris nec metus auctor laoreet. Donec tincidunt tincidunt sapien sit amet rhoncus. Nam porttitor non enim ac fringilla. Nulla sed tristique odio. Proin eu nunc vel lacus fermentum sodales.</p>
-
-                            <p>Integer non nulla sed lacus dictum porttitor vitae bibendum quam. Cras vel eros eget purus molestie facilisis. Aenean tincidunt ut erat nec cursus. Suspendisse vitae commodo justo. Suspendisse auctor ipsum convallis mauris laoreet, at rutrum purus condimentum. Phasellus ac scelerisque arcu. Morbi hendrerit dui elit. Mauris sit amet quam quis leo efficitur tristique. Maecenas ut ante pretium, consectetur massa eget, tincidunt lectus. Proin sed ligula nisi. Aliquam facilisis, urna et placerat viverra, eros nisi tristique turpis, vel maximus ligula justo vel dui. Fusce blandit augue at malesuada finibus. Morbi a mi vitae enim malesuada egestas. Vestibulum vestibulum laoreet tellus nec interdum. Donec rutrum ipsum eu magna bibendum consequat. Suspendisse potenti.</p>
-
-                            <p>Donec ut augue nec ante sodales aliquam sed eget mauris. Proin ut massa pulvinar, malesuada nunc eu, auctor metus. Nullam magna purus, cursus eu laoreet quis, cursus vitae lacus. Duis iaculis rutrum ex non sodales. Sed vitae nunc ac nibh commodo fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis maximus elementum dui eu faucibus. Duis eget vehicula dui. Quisque eu enim fermentum, elementum diam aliquet, ornare justo.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla lorem at lacinia maximus. Morbi volutpat sagittis diam sit amet tempor. In et faucibus massa. Morbi id congue enim. Aliquam ac efficitur massa, eget dapibus mi. Proin vel tellus libero. Sed suscipit bibendum commodo. Integer iaculis nunc vitae lobortis egestas. Fusce venenatis mauris nec metus auctor laoreet. Donec tincidunt tincidunt sapien sit amet rhoncus. Nam porttitor non enim ac fringilla. Nulla sed tristique odio. Proin eu nunc vel lacus fermentum sodales.</p>
-
-                            <p>Integer non nulla sed lacus dictum porttitor vitae bibendum quam. Cras vel eros eget purus molestie facilisis. Aenean tincidunt ut erat nec cursus. Suspendisse vitae commodo justo. Suspendisse auctor ipsum convallis mauris laoreet, at rutrum purus condimentum. Phasellus ac scelerisque arcu. Morbi hendrerit dui elit. Mauris sit amet quam quis leo efficitur tristique. Maecenas ut ante pretium, consectetur massa eget, tincidunt lectus. Proin sed ligula nisi. Aliquam facilisis, urna et placerat viverra, eros nisi tristique turpis, vel maximus ligula justo vel dui. Fusce blandit augue at malesuada finibus. Morbi a mi vitae enim malesuada egestas. Vestibulum vestibulum laoreet tellus nec interdum. Donec rutrum ipsum eu magna bibendum consequat. Suspendisse potenti.</p>
-
-                            <p>Donec ut augue nec ante sodales aliquam sed eget mauris. Proin ut massa pulvinar, malesuada nunc eu, auctor metus. Nullam magna purus, cursus eu laoreet quis, cursus vitae lacus. Duis iaculis rutrum ex non sodales. Sed vitae nunc ac nibh commodo fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis maximus elementum dui eu faucibus. Duis eget vehicula dui. Quisque eu enim fermentum, elementum diam aliquet, ornare justo.</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-            <div class="row row-no-padding purple-area">
-                <div class="col-xs-12">
-                    <div class="content-area">
-                        <div class="detail-cta">
-                            <a class="view-details" href="gallery-detail.html">View the Project</a>
+                        <div class="gallery-items">
+                            <div class="row row-no-padding">
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/1.jpg" data-caption="Picture 1" data-item="1">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/1.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/2.jpg" data-caption="Picture 2" data-item="2">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/2.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/3.jpg" data-caption="Picture 3" data-item="3">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/3.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/4.jpg" data-caption="Picture 4" data-item="4">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/4.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/5.jpg" data-caption="Picture 5" data-item="5">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/5.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/6.jpg" data-caption="Picture 6" data-item="6">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/6.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/7.jpg" data-caption="Picture 7" data-item="7">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/7.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/8.jpg" data-caption="Picture 8" data-item="8">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/8.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/9.jpg" data-caption="Picture 9" data-item="9">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/9.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/10.jpg" data-caption="Picture 10" data-item="10">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/10.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/11.jpg" data-caption="Picture 11" data-item="11">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/11.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/12.jpg" data-caption="Picture 12" data-item="12">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/12.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/13.jpg" data-caption="Picture 13" data-item="13">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/13.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6 col-xl-4 row-no-padding">
+                                    <div class="gallery-item" data-imageurl="_includes/img/gallery-details/14.jpg" data-caption="Picture 14" data-item="14">
+                                        <a>
+                                            <img class="gallery-image" src="_includes/img/gallery-details/14.jpg" alt="Dodge City 2016" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -463,7 +545,7 @@
                     <a href="index.html">Home</a>
                 </li>
                 <li class="blogs">
-                    <a href="">Storm Chase Blogs</a>
+                    < href="">Storm Chase Blogs</a>
                     <ul>
                         <li><a href="blog.html">Arizona Monsoon 2019</a></li>
                         <li><a href="blog.html">Storm Chase 2019</a></li>
@@ -485,6 +567,40 @@
             </ul>
         </div>
     </div>
+    <div id="lightbox" class="lightbox">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-remove close" id="gallery-image-close"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="image-holder" id="image-holder">
+                        <div class="gallery-controls gallery-controls-left">
+                            <a href="#" id="previous-gallery-item">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </div>
+                        <img id="lightbox-gallery-image" src="" alt="" />
+                        <div class="gallery-controls gallery-controls-right">
+                            <a href="#" id="next-gallery-item">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <span id="gallery-caption"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gallery-image-container">
+        <div class="image-holder">
+            <img class="image-holder" src="" />
+        </div>
+    </div>
     <div id="overlay"></div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
@@ -492,6 +608,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/font-awesome.js"></script>
     <script src="_includes/js/core.js"></script>
+    <script src="_includes/js/gallery.js"></script>
     <script src="_includes/js/gallery-details.js"></script>
     <script src="_includes/js/geojson.js"></script>
     <script src="_includes/js/map.js"></script>
